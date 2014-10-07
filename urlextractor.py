@@ -12,3 +12,5 @@ for link in soup.findAll('a'):
 
 for url in urlset:
     BeautifulSoup(urllib2.urlopen(url).read())
+    
+    
