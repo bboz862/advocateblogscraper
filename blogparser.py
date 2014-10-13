@@ -1,7 +1,6 @@
 from bs4 import BeautifulSoup
-import urllib2, csv
-import unicodecsv
-import re
+import urllib2, csv, urllib, unicodecsv,re
+
 
 # creating a set object to store urls
 urlset = set()
@@ -28,10 +27,15 @@ for url in urlset:
     categories = soup.find("footer", class_ = "entry-meta").findAll(rel = "category tag")
     for x in xrange(0,len(categories)):
         categories[x] = categories[x].text
+    # extracting themes
+    given_themes = [u'Moonshine', u'Compass', u'Habit', u'Harbor', u'Showtime', u'Fever', u'Envoy', u'Marginalia']
+    #theme.append(category_theme.intersection(given_themes))
+    if not categories == []:
+        theme = [val for val in categories if val in given_themes]
     # extracting image urls
     image_array = []
     for image in soup.findAll('img'):
-        if "gravatar" not in str(image):
+        if "gravatar" not in str(image) and ".wp.com" not in str(image):
             image_array.append(image['src'])
     # extracting audio urls
     audio_array = []
@@ -62,10 +66,38 @@ for url in urlset:
                 text_block += " " + x.text
                 block += unicode(x)
     # adding all data to metadata
-    metadata.append([title, categories, author, block, text_block, image_array, audio_array, date,url])
+    if not categories == []:
+        metadata.append([title, categories, theme, author, block, text_block, image_array, audio_array, date,url])
+
+
+#creating image CSV   
+myfile2 = open("imageinfo.csv", 'wb')
+wr = unicodecsv.writer(myfile2, quoting=csv.QUOTE_ALL)
+image_set = set()
+for x in metadata:
+    for y in x[5]:
+        ammended_url = re.search("(http(s?):/)(/[^/]+)+\.(?:jpg|gif|png|jpeg|JPG)", y)
+        if ammended_url is None:
+             image_set.add("http://www.trbimg.com/img-516f1b55/turbine/sc-mov-0416-to-the-wonder-20130418-001")
+        else:
+            image_set.add(ammended_url.group(0))
+image_list = list(image_set)
+for x in xrange(0,len(image_list)):
+    wr.writerow([x, str(image_list[x])])
+    a = re.search("(?:jpg|gif|png|jpeg|JPG)", image_list[x])
+    if a is None:
+        urllib.urlretrieve(image_list[x], "Advocate Images/"+str(x)+".jpeg")
+    else:
+        urllib.urlretrieve(image_list[x], "Advocate Images/" + str(x) +"." + re.search("(?:jpg|gif|png|jpeg|JPG)", image_list[x]).group(0))
+myfile2.close()
 
 # writing metadata to csv
 myfile = open("blogmetadata.csv", 'wb')
 wr = unicodecsv.writer(myfile, quoting=csv.QUOTE_ALL)
 for line in metadata:
     wr.writerow(line)
+myfile.close()
+
+
+    
+    
