@@ -4,20 +4,27 @@ CREATE DATABASE `advocateblog`;
 
 USE advocateblog;
 
-CREATE TABLE blogmetadata(title VARCHAR(100)
-, categories VARCHAR(1000)
+CREATE TABLE blogmetadata(
+  id MEDIUMINT NOT NULL AUTO_INCREMENT PRIMARY KEY
+,	title VARCHAR(100)
+, category_id_json VARCHAR(1000)
 , theme_id tinyint
-, author VARCHAR(100000) CHARACTER SET utf8
-, post BLOB, post_date DATE);
+, author VARCHAR(10000) CHARACTER SET utf8
+, post TEXT CHARACTER SET utf8
+, post_date DATE
+, tag_id_json VARCHAR(1000) CHARACTER SET utf8
+);
 
 LOAD DATA INFILE "/Users/brendan/Projects/advocateblogscraper/blogmetadata.csv"
 INTO TABLE blogmetadata
 COLUMNS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
 ESCAPED BY '"'
-LINES TERMINATED BY '\r\n';
+LINES TERMINATED BY '\r\n'
+(title, category_id_json, theme_id, author, post, post_date, tag_id_json);
 
-CREATE TABLE images(id SMALLINT, url VARCHAR(1000));
+CREATE TABLE images(id SMALLINT NOT NULL PRIMARY KEY
+	, url VARCHAR(1000));
 
 LOAD DATA INFILE "/Users/brendan/Projects/advocateblogscraper/imageinfo.csv"
 INTO TABLE images
@@ -27,7 +34,8 @@ ESCAPED BY '"'
 LINES TERMINATED BY '\r\n';
 
 
-CREATE TABLE themes(id SMALLINT, theme VARCHAR(100));
+CREATE TABLE themes(id SMALLINT NOT NULL PRIMARY KEY
+	, theme VARCHAR(100));
 
 LOAD DATA INFILE "/Users/brendan/Projects/advocateblogscraper/themes.csv"
 INTO TABLE themes
@@ -36,10 +44,21 @@ OPTIONALLY ENCLOSED BY '"'
 ESCAPED BY '"'
 LINES TERMINATED BY '\r\n';
 
-CREATE TABLE categories(id SMALLINT, category VARCHAR(100));
+CREATE TABLE categories(id SMALLINT NOT NULL PRIMARY KEY
+	, category VARCHAR(100));
 
 LOAD DATA INFILE "/Users/brendan/Projects/advocateblogscraper/categories.csv"
 INTO TABLE categories
+COLUMNS TERMINATED BY ','
+OPTIONALLY ENCLOSED BY '"'
+ESCAPED BY '"'
+LINES TERMINATED BY '\r\n';
+
+CREATE TABLE tags(id SMALLINT NOT NULL PRIMARY KEY
+	, tag VARCHAR(100));
+
+LOAD DATA INFILE "/Users/brendan/Projects/advocateblogscraper/tags.csv"
+INTO TABLE tags
 COLUMNS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
 ESCAPED BY '"'
