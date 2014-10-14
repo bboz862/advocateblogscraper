@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en-US"> <![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8" lang="en-US"> <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en-US"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en-US"> <!--<![endif]-->
+<head>
+
+	<!-- Basic Page Needs
+  ================================================== -->
+	<meta charset="UTF-8" />
+	<title>Wild Trotters  </title>
+
+	<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<!-- CSS
+  ================================================== -->
+				<meta name="viewport" content="width=device-width, user-scalable=no">
+		
+	<!--[if IE 7]>
+		<link rel="stylesheet" href="http://www.wildtrotters.com/wp-content/themes/tourpackage-v1-01/stylesheet/ie7-style.css" /> 
+		<link rel="stylesheet" href="http://www.wildtrotters.com/wp-content/themes/tourpackage-v1-01/stylesheet/font-awesome/font-awesome-ie7.min.css" /> 
+	<![endif]-->	
+	
+	<link rel="shortcut icon" href="http://www.wildtrotters.com/wp-content/uploads/2014/06/favicon.ico" type="image/x-icon" /><link rel="alternate" type="application/rss+xml" title="Wild Trotters &raquo; Feed" href="http://www.wildtrotters.com/?feed=rss2" />
+<link rel="alternate" type="application/rss+xml" title="Wild Trotters &raquo; Comments Feed" href="http://www.wildtrotters.com/?feed=comments-rss2" />
+<link rel='stylesheet' id='pkt-style-css'  href='http://www.wildtrotters.com/wp-content/themes/tourpackage-v1-01/style.css?ver=3.9.2' type='text/css' media='all' />
+<link rel='stylesheet' id='pkt-foundation-css'  href='http://www.wildtrotters.com/wp-content/themes/tourpackage-v1-01/stylesheet/foundation-responsive.css?ver=3.9.2' type='text/css' media='all' />
+<link rel='stylesheet' id='style-custom-css'  href='http://www.wildtrotters.com/wp-content/themes/tourpackage-v1-01/style-custom.css?ver=3.9.2' type='text/css' media='all' />
+<link rel='stylesheet' id='Google-Font-Droid+Sans-css'  href='http://fonts.googleapis.com/css?family=Droid+Sans%3An%2Ci%2Cb%2Cbi&#038;subset=latin&#038;ver=3.9.2' type='text/css' media='all' />
+<link rel='stylesheet' id='Google-Font-Droid+Serif-css'  href='http://fonts.googleapis.com/css?family=Droid+Serif%3An%2Ci%2Cb%2Cbi&#038;subset=latin&#038;ver=3.9.2' type='text/css' media='all' />
+<link rel='stylesheet' id='Google-Font-Open+Sans-css'  href='http://fonts.googleapis.com/css?family=Open+Sans%3An%2Ci%2Cb%2Cbi&#038;subset=latin&#038;ver=3.9.2' type='text/css' media='all' />
+<link rel='stylesheet' id='Google-Font-Roboto+Condensed-css'  href='http://fonts.googleapis.com/css?family=Roboto+Condensed%3An%2Ci%2Cb%2Cbi&#038;subset=latin&#038;ver=3.9.2' type='text/css' media='all' />
+<link rel='stylesheet' id='contact-form-7-css'  href='http://www.wildtrotters.com/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=3.8.1' type='text/css' media='all' />
+<link rel='stylesheet' id='layerslider_css-css'  href='http://www.wildtrotters.com/wp-content/themes/tourpackage-v1-01/include/plugin/layerslider/css/layerslider.css?ver=4.6.0' type='text/css' media='all' />
+<link rel='stylesheet' id='themeblvd_gmap-css'  href='http://www.wildtrotters.com/wp-content/plugins/theme-blvd-responsive-google-maps/assets/style.css?ver=1.0' type='text/css' media='all' />
+<link rel='stylesheet' id='superfish-css'  href='http://www.wildtrotters.com/wp-content/themes/tourpackage-v1-01/stylesheet/superfish.css?ver=3.9.2' type='text/css' media='all' />
+<link rel='stylesheet' id='fancybox-css'  href='http://www.wildtrotters.com/wp-content/themes/tourpackage-v1-01/stylesheet/fancybox.css?ver=3.9.2' type='text/css' media='all' />
+<link rel='stylesheet' id='fancybox-thumbs-css'  href='http://www.wildtrotters.com/wp-content/themes/tourpackage-v1-01/stylesheet/jquery.fancybox-thumbs.css?ver=3.9.2' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-css'  href='http://www.wildtrotters.com/wp-content/themes/tourpackage-v1-01/stylesheet/font-awesome/font-awesome.css?ver=3.9.2' type='text/css' media='all' />
+<script type='text/javascript' src='http://www.wildtrotters.com/wp-includes/js/jquery/jquery.js?ver=1.11.0'></script>
+<script type='text/javascript' src='http://www.wildtrotters.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<script type='text/javascript' src='http://www.wildtrotters.com/wp-content/plugins/theme-blvd-responsive-google-maps/assets/jquery.gmap.min.js?ver=3.0'></script>
+<script type='text/javascript' src='http://www.wildtrotters.com/wp-content/themes/tourpackage-v1-01/include/plugin/layerslider/js/layerslider.kreaturamedia.jquery.js?ver=4.6.0'></script>
+<script type='text/javascript' src='http://www.wildtrotters.com/wp-content/themes/tourpackage-v1-01/include/plugin/layerslider/js/jquery-easing-1.3.js?ver=1.3.0'></script>
+<script type='text/javascript' src='http://www.wildtrotters.com/wp-content/themes/tourpackage-v1-01/include/plugin/layerslider/js/jquerytransit.js?ver=0.9.9'></script>
+<script type='text/javascript' src='http://www.wildtrotters.com/wp-content/themes/tourpackage-v1-01/include/plugin/layerslider/js/layerslider.transitions.js?ver=4.6.0'></script>
+<script type='text/javascript' src='http://www.wildtrotters.com/wp-content/themes/tourpackage-v1-01/javascript/jquery.fitvids.js?ver=1.0'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.wildtrotters.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.wildtrotters.com/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 3.9.2" />
+	
+<!--[if lt IE 9]>
+<style type="text/css">
+	div.shortcode-dropcap.circle,
+	div.anythingSlider .anythingControls ul a, .flex-control-nav li a, 
+	.nivo-controlNav a, ls-bottom-slidebuttons a{
+		z-index: 1000;
+		position: relative;
+		behavior: url(http://www.wildtrotters.com/wp-content/themes/tourpackage-v1-01/stylesheet/ie-fix/PIE.php);
+	}
+
+	ul.gdl-accordion li, ul.gdl-toggle-box li{ overflow: hidden; }
+	
+	.logo-wrapper{ overflow: hidden; width: 125px !important; }	
+</style>
+<![endif]-->
+	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+</head>
+<body class="home blog">
+<div class="body-outer-wrapper">
+	<div class="body-wrapper">
+		<div class="header-outer-wrapper no-top-slider">
+			<div class="header-area-wrapper">
+				<!-- top navigation -->
+									<div class="top-navigation-wrapper boxed-style">
+						<div class="top-navigation-container container">
+							<div class="top-social-wrapper"><div id="gdl-social-icon" class="social-wrapper gdl-retina"><div class="social-icon-wrapper"></div></div></div><div class="top-search-wrapper">									<div class="gdl-search-form">
+										<form method="get" id="searchform" action="http://www.wildtrotters.com/">
+											<input type="submit" id="searchsubmit" value="" />
+											<div class="search-text" id="search-text">
+												<input type="text" value="" name="s" id="s" autocomplete="off" data-default="" />
+											</div>
+											<div class="clear"></div>
+										</form>
+									</div>
+									</div>							<div class="clear"></div>
+						</div>
+					</div> <!-- top navigation wrapper -->
+								
+				<div class="header-wrapper boxed-style">
+					<div class="header-container container">
+						<!-- Get Logo -->
+						<div class="logo-wrapper">
+							<h1><a href="http://www.wildtrotters.com"><img src="http://www.wildtrotters.com/wp-content/uploads/2014/06/wild-trotters-logo.png" alt=""/></a></h1>						</div>
+
+						<!-- Navigation -->
+						<div class="gdl-navigation-wrapper">
+							<div class="navigation-wrapper sliding-bar"><div class="clear"></div></div>							<div class="clear"></div>
+						</div>
+						<div class="clear"></div>
+					</div> <!-- header container -->
+				</div> <!-- header area -->		
+			</div> <!-- header wrapper -->		
+					</div> <!-- header outer wrapper --><div class="page-wrapper index-php">  
+	<div class="gdl-page-item">
+		<div class="row">
+			<div class="twelve columns">
+			<p>Welcome to WordPress. This is your first post. Edit or delete it, then start blogging!</p>
+			</div>
+		</div>
+	</div>
+	<div class="clear"></div>
+</div>
+				
+		
+		<div class="footer-wrapper boxed-style">
+
+		<!-- Get Footer Widget -->
+							<div class="container footer-container">
+				<div class="footer-widget-wrapper">
+					<div class="row">
+						<div class="three columns gdl-footer-1 mb0"><div class="custom-sidebar widget_search" id="search-2" ><div class="gdl-search-form">
+	<form method="get" id="searchform" action="http://www.wildtrotters.com/">
+				<div class="search-text" id="search-text">
+			<input type="text" value="Type keywords..." name="s" id="s" autocomplete="off" data-default="Type keywords..." />
+		</div>
+		<input type="submit" id="searchsubmit" value="" />
+		<div class="clear"></div>
+	</form>
+</div></div>		<div class="custom-sidebar widget_recent_entries" id="recent-posts-2" >		<h3 class="custom-sidebar-title">Recent Posts</h3>		<ul>
+					<li>
+				<a href="http://www.wildtrotters.com/?p=1">Hello world!</a>
+						</li>
+				</ul>
+		</div><div class="custom-sidebar widget_recent_comments" id="recent-comments-2" ><h3 class="custom-sidebar-title">Recent Comments</h3><ul id="recentcomments"><li class="recentcomments"><a href='http://wordpress.org/' rel='external nofollow' class='url'>Mr WordPress</a> on <a href="http://www.wildtrotters.com/?p=1#comment-1">Hello world!</a></li></ul></div><div class="custom-sidebar widget_archive" id="archives-2" ><h3 class="custom-sidebar-title">Archives</h3>		<ul>
+	<li><a href='http://www.wildtrotters.com/?m=201406'>June 2014</a></li>
+		</ul>
+</div><div class="custom-sidebar widget_categories" id="categories-2" ><h3 class="custom-sidebar-title">Categories</h3>		<ul>
+	<li class="cat-item cat-item-1"><a href="http://www.wildtrotters.com/?cat=1" title="View all posts filed under Uncategorized">Uncategorized</a>
+</li>
+		</ul>
+</div><div class="custom-sidebar widget_meta" id="meta-2" ><h3 class="custom-sidebar-title">Meta</h3>			<ul>
+						<li><a href="http://www.wildtrotters.com/wp-login.php">Log in</a></li>
+			<li><a href="http://www.wildtrotters.com/?feed=rss2" title="Syndicate this site using RSS 2.0">Entries <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="http://www.wildtrotters.com/?feed=comments-rss2" title="The latest comments to all posts in RSS">Comments <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+<li><a href="https://wordpress.org/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress.org</a></li>			</ul>
+</div></div><div class="three columns gdl-footer-2 mb0"></div><div class="three columns gdl-footer-3 mb0"></div><div class="three columns gdl-footer-4 mb0"></div>						<div class="clear"></div>
+					</div> <!-- close row -->
+					
+					<!-- Get Copyright Text -->
+																<div class="copyright-wrapper">
+							<div class="copyright-border"></div>
+							<div class="copyright-left">
+															</div>
+						</div>
+										
+				</div>
+			</div> 
+		
+		</div><!-- footer wrapper -->
+	</div> <!-- body wrapper -->
+</div> <!-- body outer wrapper -->
+	
+<script type="text/javascript">jQuery(document).ready(function(){});</script>	<script>
+		var getElementsByClassName=function(a,b,c){if(document.getElementsByClassName){getElementsByClassName=function(a,b,c){c=c||document;var d=c.getElementsByClassName(a),e=b?new RegExp("\\b"+b+"\\b","i"):null,f=[],g;for(var h=0,i=d.length;h<i;h+=1){g=d[h];if(!e||e.test(g.nodeName)){f.push(g)}}return f}}else if(document.evaluate){getElementsByClassName=function(a,b,c){b=b||"*";c=c||document;var d=a.split(" "),e="",f="http://www.w3.org/1999/xhtml",g=document.documentElement.namespaceURI===f?f:null,h=[],i,j;for(var k=0,l=d.length;k<l;k+=1){e+="[contains(concat(' ', @class, ' '), ' "+d[k]+" ')]"}try{i=document.evaluate(".//"+b+e,c,g,0,null)}catch(m){i=document.evaluate(".//"+b+e,c,null,0,null)}while(j=i.iterateNext()){h.push(j)}return h}}else{getElementsByClassName=function(a,b,c){b=b||"*";c=c||document;var d=a.split(" "),e=[],f=b==="*"&&c.all?c.all:c.getElementsByTagName(b),g,h=[],i;for(var j=0,k=d.length;j<k;j+=1){e.push(new RegExp("(^|\\s)"+d[j]+"(\\s|$)"))}for(var l=0,m=f.length;l<m;l+=1){g=f[l];i=false;for(var n=0,o=e.length;n<o;n+=1){i=e[n].test(g.className);if(!i){break}}if(i){h.push(g)}}return h}}return getElementsByClassName(a,b,c)},
+			dropdowns = getElementsByClassName( 'dropdown-menu' );
+		for ( i=0; i<dropdowns.length; i++ )
+			dropdowns[i].onchange = function(){ if ( this.value != '' ) window.location.href = this.value; }
+	</script>
+	<script type='text/javascript' src='http://www.wildtrotters.com/wp-content/plugins/contact-form-7/includes/js/jquery.form.min.js?ver=3.50.0-2014.02.05'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var _wpcf7 = {"loaderUrl":"http:\/\/www.wildtrotters.com\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif","sending":"Sending ..."};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://www.wildtrotters.com/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=3.8.1'></script>
+<script type='text/javascript' src='http://www.wildtrotters.com/wp-content/themes/tourpackage-v1-01/javascript/superfish.js?ver=1.0'></script>
+<script type='text/javascript' src='http://www.wildtrotters.com/wp-content/themes/tourpackage-v1-01/javascript/supersub.js?ver=1.0'></script>
+<script type='text/javascript' src='http://www.wildtrotters.com/wp-content/themes/tourpackage-v1-01/javascript/hoverIntent.js?ver=1.0'></script>
+<script type='text/javascript' src='http://www.wildtrotters.com/wp-content/themes/tourpackage-v1-01/javascript/jquery.easing.js?ver=1.0'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var ATTR = {"enable":"enable","width":"80","height":"45"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://www.wildtrotters.com/wp-content/themes/tourpackage-v1-01/javascript/jquery.fancybox.js?ver=1.0'></script>
+<script type='text/javascript' src='http://www.wildtrotters.com/wp-content/themes/tourpackage-v1-01/javascript/jquery.fancybox-media.js?ver=1.0'></script>
+<script type='text/javascript' src='http://www.wildtrotters.com/wp-content/themes/tourpackage-v1-01/javascript/jquery.fancybox-thumbs.js?ver=1.0'></script>
+<script type='text/javascript' src='http://www.wildtrotters.com/wp-content/themes/tourpackage-v1-01/javascript/gdl-scripts.js?ver=1.0'></script>
+
+</body>
+</html>

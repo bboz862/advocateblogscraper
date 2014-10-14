@@ -30,8 +30,9 @@ for url in urlset:
     # extracting themes
     given_themes = [u'Moonshine', u'Compass', u'Habit', u'Harbor', u'Showtime', u'Fever', u'Envoy', u'Marginalia']
     #theme.append(category_theme.intersection(given_themes))
-    if not categories == []:
-        theme = [val for val in categories if val in given_themes]
+    theme = [val for val in categories if val in given_themes]
+    if theme != []:
+        theme = theme[0]
     # extracting image urls
     image_array = []
     for image in soup.findAll('img'):
@@ -86,9 +87,9 @@ for x in xrange(0,len(image_list)):
     wr.writerow([x, str(image_list[x])])
     a = re.search("(?:jpg|gif|png|jpeg|JPG)", image_list[x])
     if a is None:
-        urllib.urlretrieve(image_list[x], "Advocate Images/"+str(x)+".jpeg")
+        urllib.urlretrieve(image_list[x], "AdvocateImages/"+str(x)+".jpeg")
     else:
-        urllib.urlretrieve(image_list[x], "Advocate Images/" + str(x) +"." + re.search("(?:jpg|gif|png|jpeg|JPG)", image_list[x]).group(0))
+        urllib.urlretrieve(image_list[x], "AdvocateImages/" + str(x) +"." + re.search("(?:jpg|gif|png|jpeg|JPG)", image_list[x]).group(0))
 myfile2.close()
 
 # writing metadata to csv
