@@ -1,4 +1,5 @@
 from bs4 import BeautifulSoup
+# -*- coding: utf-8 -*-
 import urllib2, csv, urllib, unicodecsv, re, json, calendar
 
 # creating a set object to store urls
@@ -74,6 +75,67 @@ for url in urlset:
     tags = soup.find("footer", class_ = "entry-meta").findAll(rel = "tag")
     for x in xrange(0,len(tags)):
         tags[x] = tags[x].text
+    #hardcoding in authors
+    if "http://theadvocateblog.net/2013/03/03/brood/" in url:
+        author = 'Oliver Luo \'13'
+    if "http://theadvocateblog.net/2012/11/05/the-lyric-essay-glass/" in url:    
+        author = 'Stephanie Newman \’13'
+    if "http://theadvocateblog.net/2012/11/28/envoy-cape-trib/" in url or "http://theadvocateblog.net/2012/11/15/this-months-theme-fever/" in url:
+        author = 'Patrick Lauppe \’13'
+    if "http://theadvocateblog.net/2013/06/22/antique-and-medieval-southern-france/" in url or "http://theadvocateblog.net/2013/09/13/horizonless-landscapes-of-yellowstone/" in url or "http://theadvocateblog.net/2013/07/21/moonshine-culvert/" in url:
+        author = 'Isaac Dayno \’15'
+    if "http://theadvocateblog.net/2013/03/05/origin-editors-note/" in url or "http://theadvocateblog.net/2013/03/07/a-conversation-with-john-hughes-part-i/" in url or "http://theadvocateblog.net/2013/03/14/a-conversation-with-john-hughes-part-ii/" in url:
+        author = 'Alexander Wells \’13, President Emeritus'
+    if "http://theadvocateblog.net/2012/11/23/stallone-in-one-take/" in url:
+        author = 'Alexander Traub \’13'
+    if "http://theadvocateblog.net/2014/02/17/trial-aniseed-in-sand/" in url:
+        author = 'Moeko Fujii \’15 and Michelle Long \’17'
+    if "http://theadvocateblog.net/2012/10/24/kaylas-day-in/" in url or "http://theadvocateblog.net/2012/10/09/its-almost-midnight/" in url or "http://theadvocateblog.net/2013/03/25/habit-kayla-escobedo/" in url or "http://theadvocateblog.net/2013/04/09/habit-kayla-escobedo-ii/" in url:    
+        author = 'Kayla Escobedo \’13'
+    if "http://theadvocateblog.net/2012/10/07/down-the-rabbit-hole/" in url:    
+        author = 'Julian Lucas \’15'
+    if "http://theadvocateblog.net/2014/04/27/trial-heroines-part-1/" in url or "http://theadvocateblog.net/2014/05/11/trial-heroines-part-2/" in url:    
+        author = 'Indiana Seresin \’15 and Liza Batkin \’15'
+    if "http://theadvocateblog.net/2013/10/17/psychedelicious-a-conversation-with-l-a-jeff/" in url or "http://theadvocateblog.net/2013/02/01/envoy-introducing-harbor/" in url or "http://theadvocateblog.net/2013/01/21/cabinet-9/" in url or "http://theadvocateblog.net/2012/12/30/cabinet-6/" in url or "http://theadvocateblog.net/2012/11/07/taking-turns-dan-chiasson-and-david-ferry-at-the-harvard-advocate/" in url or "http://theadvocateblog.net/2013/03/04/cabinet-16/" in url:    
+        author = 'Kevin Hong \’15'
+    if "http://theadvocateblog.net/2012/10/17/from-the-archives-ee-cummings/" in url:
+        author = 'Sarah Hopkinson \’13'
+    if "http://theadvocateblog.net/2014/03/28/a-conversation-with-elise-adibi/" in url:
+        author = 'Harry Choi \’16'
+    if "http://theadvocateblog.net/2012/11/06/from-the-archives-a-reading-of-love-poems/" in url or "http://theadvocateblog.net/2013/03/12/introduction-habit/" in url:    
+        author = 'Liza Batkin \’15'
+    if "http://theadvocateblog.net/2013/02/19/sounds-birches/" in url:    
+        author = 'Hana Bajramovic \’13'
+    if "http://theadvocateblog.net/2012/10/07/return/" in url:    
+        author = "Victoria Baena \’14"
+    if "http://theadvocateblog.net/2013/04/26/sounds-meditations-in-an-emergency-2/" in url:    
+        author = 'Julian Gewirtz \’13'
+    if "http://theadvocateblog.net/2012/10/07/to-the-harbormaster/" in url:    
+        author = 'Hana Bajramovic \’13'
+    if "http://theadvocateblog.net/2014/03/15/trial-panel/" in url:    
+        author = 'Advocate Staff'
+    if "http://theadvocateblog.net/2012/11/16/aeschylus-and-the-election/" in url:    
+        author = 'Reina Gattuso \’15'
+    if "http://theadvocateblog.net/2012/11/04/cabinet/" in url or "http://theadvocateblog.net/2013/03/24/cabinet-18/" in url:    
+        author = 'Julian Lucas \'15'
+    if "http://theadvocateblog.net/2012/10/07/envoy-winning/" in url:
+        author = 'Warner James Wood \’14'
+    if "http://theadvocateblog.net/2013/02/04/envoy-in-izmir/" in url:    
+        author = 'Reina Gattuso \’15'
+    if "http://theadvocateblog.net/2014/04/15/a-conversation-with-charlotte-lieberman/" in url: 
+        author = 'Kiara Barrow \’16'    
+    if "http://theadvocateblog.net/2013/12/29/told-by-an-idiot-signifying-nothing/" in url:    
+        author = 'Sarah Rosenthal \’15'
+    if "http://theadvocateblog.net/2013/05/05/introduction-compass/" in url:    
+        author = 'James Wood \’14'
+    if "http://theadvocateblog.net/2012/10/07/envoy-morocco/" in url:    
+        author = 'Molly Dektar \’12'
+    if "http://theadvocateblog.net/2014/02/25/trial-eulogy-for-a-cosmonaut/" in url:    
+        author = 'Noah Pisner \’14 and Michelle Long \’17'
+    if "http://theadvocateblog.net/2014/05/27/spring-2014-a-conversation-with-jacob-moscana-skolnik/" in url:    
+        author = 'Jacob Moscona-Skolnik \’16 and Colton Valentine \’16'
+    if "http://theadvocateblog.net/2013/12/17/marginalia-faye-zhang/" in url:    
+        author = 'Faye Zhang \'17'
     # adding all data to metadata
     if not categories == []:
         metadata.append([title, categories, theme, author, block, text_block, image_array, audio_array, date,url,tags])
