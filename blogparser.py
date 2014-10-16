@@ -80,8 +80,6 @@ for url in urlset:
 
 
 #creating image csv
-myfile2 = open("imageinfo.csv", 'wb')
-wr = unicodecsv.writer(myfile2, quoting=csv.QUOTE_ALL)
 image_set = set()
 for x in metadata:
     for y in x[6]:
@@ -91,16 +89,72 @@ for x in metadata:
         else:
             image_set.add(ammended_url.group(0))
 image_list = list(image_set)
+new_image_list = []
 image_dict ={}
 for x in xrange(0,len(image_list)):
-    wr.writerow([x, str(image_list[x])])
     a = re.search("(?:jpg|gif|png|jpeg|JPG)", image_list[x])
     image_dict[ str(image_list[x])] = x + 1
-    # if a is None:
-    #     urllib.urlretrieve(image_list[x], "AdvocateImages/"+str(x+1)+".jpeg")
-    # else:
-    #     urllib.urlretrieve(image_list[x], "AdvocateImages/" + str(x+1) +"." + re.search("(?:jpg|gif|png|jpeg|JPG)", image_list[x]).group(0))
+    if a is None:
+        #urllib.urlretrieve(image_list[x], "/Users/brendan/Projects/advocateblogscraper/AdvocateImages/"+str(x+1)+".jpeg")
+        new_image_list.append([x+1,"/Users/brendan/Projects/advocateblogscraper/AdvocateImages/"+str(x+1)+".jpeg", ""])
+    else:
+        #urllib.urlretrieve(image_list[x], "/Users/brendan/Projects/advocateblogscraper/AdvocateImages/" + str(x+1) +"." + re.search("(?:jpg|gif|png|jpeg|JPG)", image_list[x]).group(0))
+        new_image_list.append([x+1, "/Users/brendan/Projects/advocateblogscraper/AdvocateImages/" + str(x+1) +"." + re.search("(?:jpg|gif|png|jpeg|JPG)", image_list[x]).group(0), ""])
+
+
+for post in xrange(0,len(metadata)):
+    body_text = metadata[post][4]
+    a = BeautifulSoup(body_text)
+    p_list = a.findAll('p')
+    div_p_list = a.findAll(['div','p'])
+    for x in p_list:
+        z = x.findAll('img')
+        for q in z:
+            search_str = re.search("(http(s?):/)(/[^/]+)+\.(?:jpg|gif|png|jpeg|JPG)", q['src'])
+            if search_str is None:
+                print q
+                x.replace_with('{{ 89 }}')
+            elif search_str.group(0) in image_dict:
+                search_str = search_str.group(0)
+                new_str = '{{' + str(image_dict[search_str]) 
+                if q.has_attr('class'):
+                    for blarg in q['class']:
+                        if 'wp-image' not in blarg:
+                            new_str += " " + blarg
+                new_str += '}}'
+                if x.parent is not None:
+                    x.replace_with(unicode(new_str))
+            else:
+                x.replace_with( "")
+    div_list = a.findAll('div')
+    for x in div_list:
+        z = x.findAll('img')
+        caption = ""
+        if x.has_attr('class') and "wp-caption" in str(x['class'][0]):
+            caption =  div_p_list[div_p_list.index(x)].text
+        for q in z:
+            search_str = re.search("(http(s?):/)(/[^/]+)+\.(?:jpg|gif|png|jpeg|JPG)", q['src'])
+            if search_str is None:
+                x.replace_with('{{89 width: 610px}}')
+            elif search_str.group(0) in image_dict:
+                search_str = search_str.group(0)
+                if q.has_attr('class'):
+                    new_str = '{{' + str(image_dict[search_str]) + ' ' + q['class'][0] + '}}'
+                else:
+                    new_str = '{{' + str(image_dict[search_str]) + '}}'
+                if x.parent is not None:
+                    x.replace_with(unicode(new_str))
+                new_image_list[image_dict[search_str] - 1][2] = caption
+            else:
+                x.replace_with("")
+    metadata[post][4] = unicode(a)
+
+myfile2 = open("imageinfo.csv", 'wb')
+wr = unicodecsv.writer(myfile2, quoting=csv.QUOTE_ALL)
+for x in new_image_list:
+    wr.writerow(x)
 myfile2.close()
+
 
 
 
