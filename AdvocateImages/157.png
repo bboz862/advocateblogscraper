@@ -26,7 +26,7 @@
         <h1>
           <span class="cf-error-type" data-translate="error">Error</span>
           <span class="cf-error-code">1010</span>
-          <small class="heading-ray-id">Ray ID: 17a074a38a3d01ee</small>
+          <small class="heading-ray-id">Ray ID: 17a0d757dd9a01ee</small>
         </h1>
         <h2 class="cf-subheadline" data-translate="error_desc">Access denied</h2>
       </div><!-- /.header -->
@@ -37,7 +37,7 @@
         <div class="cf-columns two">
           <div class="cf-column">
             <h2 data-translate="what_happened">What happened?</h2>
-            <p>The owner of this website (www.full-stop.net) has banned your access based on your browser's signature (17a074a38a3d01ee-ua48).</p>
+            <p>The owner of this website (www.full-stop.net) has banned your access based on your browser's signature (17a0d757dd9a01ee-ua48).</p>
           </div>
 
           
@@ -46,9 +46,9 @@
 
       <div class="cf-error-footer cf-wrapper">
   <p>
-    <span class="cf-footer-item">CloudFlare Ray ID: <strong>17a074a38a3d01ee</strong></span>
+    <span class="cf-footer-item">CloudFlare Ray ID: <strong>17a0d757dd9a01ee</strong></span>
     <span class="cf-footer-separator">&bull;</span>
-    <span class="cf-footer-item"><span data-translate="your_ip">Your IP</span>: 65.112.10.30</span>
+    <span class="cf-footer-item"><span data-translate="your_ip">Your IP</span>: 65.112.10.206</span>
     <span class="cf-footer-separator">&bull;</span>
     <span class="cf-footer-item"><span data-translate="performance_security_by">Performance &amp; security by</span> <a data-orig-proto="https" data-orig-ref="www.cloudflare.com/5xx-error-landing" id="cloudflare_link" target="_blank">CloudFlare</a></span>
     

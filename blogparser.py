@@ -95,10 +95,10 @@ for x in xrange(0,len(image_list)):
     a = re.search("(?:jpg|gif|png|jpeg|JPG)", image_list[x])
     image_dict[ str(image_list[x])] = x + 1
     if a is None:
-        #urllib.urlretrieve(image_list[x], "/Users/brendan/Projects/advocateblogscraper/AdvocateImages/"+str(x+1)+".jpeg")
+        urllib.urlretrieve(image_list[x], "AdvocateImages/"+str(x+1)+".jpeg")
         new_image_list.append([x+1,"/Users/brendan/Projects/advocateblogscraper/AdvocateImages/"+str(x+1)+".jpeg", ""])
     else:
-        #urllib.urlretrieve(image_list[x], "/Users/brendan/Projects/advocateblogscraper/AdvocateImages/" + str(x+1) +"." + re.search("(?:jpg|gif|png|jpeg|JPG)", image_list[x]).group(0))
+        urllib.urlretrieve(image_list[x], "AdvocateImages/" + str(x+1) +"." + re.search("(?:jpg|gif|png|jpeg|JPG)", image_list[x]).group(0))
         new_image_list.append([x+1, "/Users/brendan/Projects/advocateblogscraper/AdvocateImages/" + str(x+1) +"." + re.search("(?:jpg|gif|png|jpeg|JPG)", image_list[x]).group(0), ""])
 
 
@@ -107,25 +107,7 @@ for post in xrange(0,len(metadata)):
     a = BeautifulSoup(body_text)
     p_list = a.findAll('p')
     div_p_list = a.findAll(['div','p'])
-    for x in p_list:
-        z = x.findAll('img')
-        for q in z:
-            search_str = re.search("(http(s?):/)(/[^/]+)+\.(?:jpg|gif|png|jpeg|JPG)", q['src'])
-            if search_str is None:
-                print q
-                x.replace_with('{{ 89 }}')
-            elif search_str.group(0) in image_dict:
-                search_str = search_str.group(0)
-                new_str = '{{' + str(image_dict[search_str]) 
-                if q.has_attr('class'):
-                    for blarg in q['class']:
-                        if 'wp-image' not in blarg:
-                            new_str += " " + blarg
-                new_str += '}}'
-                if x.parent is not None:
-                    x.replace_with(unicode(new_str))
-            else:
-                x.replace_with( "")
+
     div_list = a.findAll('div')
     for x in div_list:
         z = x.findAll('img')
@@ -147,6 +129,27 @@ for post in xrange(0,len(metadata)):
                 new_image_list[image_dict[search_str] - 1][2] = caption
             else:
                 x.replace_with("")
+    for x in p_list:
+        z = x.findAll('img')
+        for q in z:
+            search_str = re.search("(http(s?):/)(/[^/]+)+\.(?:jpg|gif|png|jpeg|JPG)", q['src'])
+            if search_str is None:
+                print q
+                x.replace_with('{{ 89 }}')
+            elif search_str.group(0) in image_dict:
+                search_str = search_str.group(0)
+                new_str = '{{' + str(image_dict[search_str]) 
+                if q.has_attr('class'):
+                    for blarg in q['class']:
+                        if 'wp-image' not in blarg:
+                            new_str += " " + blarg
+                new_str += '}}'
+                if x.parent is not None:
+                    x.replace_with(unicode(new_str))
+            else:
+                x.replace_with( "")
+        if x.has_attr('class') and "wp-caption" in str(x['class'][0]):
+            x.replace_with("")
     metadata[post][4] = unicode(a)
 
 myfile2 = open("imageinfo.csv", 'wb')

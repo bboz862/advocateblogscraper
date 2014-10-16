@@ -37,7 +37,8 @@ LINES TERMINATED BY '\r\n';
 
 
 CREATE TABLE themes(id SMALLINT NOT NULL PRIMARY KEY
-	, name VARCHAR(100));
+	, name VARCHAR(100)
+);
 
 LOAD DATA INFILE "/Users/brendan/Projects/advocateblogscraper/themes.csv"
 INTO TABLE themes
@@ -47,7 +48,8 @@ ESCAPED BY '"'
 LINES TERMINATED BY '\r\n';
 
 CREATE TABLE categories(id SMALLINT NOT NULL PRIMARY KEY
-	, name VARCHAR(100));
+	, name VARCHAR(100)
+);
 
 LOAD DATA INFILE "/Users/brendan/Projects/advocateblogscraper/categories.csv"
 INTO TABLE categories
@@ -57,7 +59,8 @@ ESCAPED BY '"'
 LINES TERMINATED BY '\r\n';
 
 CREATE TABLE tags(id SMALLINT NOT NULL PRIMARY KEY
-	, name VARCHAR(100));
+	, name VARCHAR(100)
+);
 
 LOAD DATA INFILE "/Users/brendan/Projects/advocateblogscraper/tags.csv"
 INTO TABLE tags
