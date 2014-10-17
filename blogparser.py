@@ -1,6 +1,6 @@
 from bs4 import BeautifulSoup
 # -*- coding: utf-8 -*-
-import urllib2, csv, urllib, unicodecsv, re, json, calendar
+import urllib2, csv, urllib, unicodecsv, re, json, calendar, os
 
 # creating a set object to store urls
 urlset = set()
@@ -158,10 +158,10 @@ for x in xrange(0,len(image_list)):
     image_dict[ str(image_list[x])] = x + 1
     if a is None:
         urllib.urlretrieve(image_list[x], "AdvocateImages/"+str(x+1)+".jpeg")
-        new_image_list.append([x+1,"/Users/brendan/Projects/advocateblogscraper/AdvocateImages/"+str(x+1)+".jpeg", ""])
+        new_image_list.append([x+1, os.getcwd() + "AdvocateImages/"+str(x+1)+".jpeg", ""])
     else:
         urllib.urlretrieve(image_list[x], "AdvocateImages/" + str(x+1) +"." + re.search("(?:jpg|gif|png|jpeg|JPG)", image_list[x]).group(0))
-        new_image_list.append([x+1, "/Users/brendan/Projects/advocateblogscraper/AdvocateImages/" + str(x+1) +"." + re.search("(?:jpg|gif|png|jpeg|JPG)", image_list[x]).group(0), ""])
+        new_image_list.append([x+1, os.getcwd() + "/AdvocateImages/" + str(x+1) +"." + re.search("(?:jpg|gif|png|jpeg|JPG)", image_list[x]).group(0), ""])
 
 
 for post in xrange(0,len(metadata)):
@@ -236,7 +236,6 @@ for x in xrange(0,len(category_list)):
     category_dict[category_list[x]] = x + 1
 myfile3.close()
 
-
 myfile4 = open("themes.csv", 'wb')
 wr = unicodecsv.writer(myfile4, quoting=csv.QUOTE_ALL)
 theme_set = set()
@@ -266,7 +265,15 @@ for x in xrange(0,len(tag_list)):
 myfile5.close()
 
 
+
+
+
 cal_dict = dict((v,k) for k,v in enumerate(calendar.month_name))
+
+
+myfile6 = open("blogmetadata.csv", 'wb')
+wr = unicodecsv.writer(myfile5, quoting=csv.QUOTE_ALL)
+
 
 # writing metadata to csv
 myfile = open("blogmetadata.csv", 'wb')
@@ -277,6 +284,21 @@ for l in metadata:
     else:
         wr.writerow([l[0],json.dumps([category_dict[str(x)] for x in l[1]]),max_theme,l[3],l[4],str(l[8]).split()[2] + '-' + str(cal_dict[str(l[8]).split()[0]]) + '-' + str(l[8]).split()[1].strip(','),json.dumps([tag_dict[x] for x in l[10]])])
 myfile.close()
+
+
+myfile6 = open("blogpost_category_relation.csv", 'wb')
+wr = unicodecsv.writer(myfile6, quoting=csv.QUOTE_ALL)
+for l in xrange(0,len(metadata)):
+    for y in [category_dict[str(x)] for x in metadata[l][1]]:
+        wr.writerow([l+1,y])
+myfile6.close()
+
+myfile7 = open("blogpost_tag_relation.csv", 'wb')
+wr = unicodecsv.writer(myfile7, quoting=csv.QUOTE_ALL)
+for l in xrange(0,len(metadata)):
+    for y in [tag_dict[x] for x in metadata[l][10]]:
+        wr.writerow([l+1,y])
+myfile7.close()
 
 
     

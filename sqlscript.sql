@@ -8,7 +8,7 @@ CREATE TABLE blogmetadata(
   id MEDIUMINT NOT NULL AUTO_INCREMENT PRIMARY KEY
 ,	title VARCHAR(100)
 , category_id_json VARCHAR(1000)
-, theme_id tinyint
+, theme_id TINYINT
 , author VARCHAR(10000) CHARACTER SET utf8
 , post TEXT CHARACTER SET utf8
 , post_date DATE
@@ -69,3 +69,30 @@ OPTIONALLY ENCLOSED BY '"'
 ESCAPED BY '"'
 LINES TERMINATED BY '\r\n';
 
+CREATE TABLE blogpost_tag_relation(
+  id MEDIUMINT NOT NULL AUTO_INCREMENT PRIMARY KEY
+	, post_id SMALLINT 
+	, tag_id SMALLINT
+);
+
+LOAD DATA INFILE "/Users/brendan/Projects/advocateblogscraper/blogpost_tag_relation.csv"
+INTO TABLE blogpost_tag_relation
+COLUMNS TERMINATED BY ','
+OPTIONALLY ENCLOSED BY '"'
+ESCAPED BY '"'
+LINES TERMINATED BY '\r\n'
+(post_id,tag_id);
+
+CREATE TABLE blogpost_category_relation(
+  id MEDIUMINT NOT NULL AUTO_INCREMENT PRIMARY KEY
+	, post_id SMALLINT 
+	, category_id SMALLINT
+);
+
+LOAD DATA INFILE "/Users/brendan/Projects/advocateblogscraper/blogpost_category_relation.csv"
+INTO TABLE blogpost_category_relation
+COLUMNS TERMINATED BY ','
+OPTIONALLY ENCLOSED BY '"'
+ESCAPED BY '"'
+LINES TERMINATED BY '\r\n'
+(post_id, category_id);
