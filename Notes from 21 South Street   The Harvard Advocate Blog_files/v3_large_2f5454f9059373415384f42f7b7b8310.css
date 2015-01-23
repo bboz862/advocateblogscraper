@@ -1,0 +1,1952 @@
+#player.smallartwork,
+#player.noartwork {
+    font-size: 0;
+}
+
+#linkareaalt,
+#logoalt,
+#logoalt2 {
+    display: none;
+}
+
+#nonartarea {
+    width: 100%;
+}
+
+.hastracklist #nonartarea {
+    padding-bottom: 15px;
+}
+
+.smallartwork #infolayer .info {
+
+}
+
+.hastracklist.smallartwork #nonartarea,
+.hastracklist.noartwork #nonartarea {
+    padding-bottom: 15px;
+    border: 1px solid #d2d2d2;
+}
+
+#tracklist {
+    display: none;
+    margin: 0;
+    border: 1px solid #f1f1f1;
+    border-right: 0;
+    border-left: 0;
+    margin: 0 2.86%;
+}
+
+.hastracklist #tracklist {
+    display: block;
+    visibility: visible;
+    position: relative;
+}
+
+.hastracklist.smallartwork #tracklist,
+.hastracklist.noartwork #tracklist {
+    border: 0;
+    margin: 0 0 0 10px;
+    padding: 5px 10px 0 0;
+}
+
+.hastracklist.smallartwork #infolayer .info,
+.hastracklist.noartwork #infolayer .info {
+    border: 0;
+    border-bottom: 1px solid #f1f1f1;
+    height: 119px;
+}
+
+.hastracklist.smallartwork .art {
+    position: absolute;
+    width: 120px;
+    padding-top: 120px;
+    top:-1px;
+    left:-1px;
+}
+
+.hastracklist #currenttitle,
+.hastracklist #currenttime,
+.hastracklist #totaltime {
+    display: none;
+}
+
+
+
+
+.has_info_slider #infolayer {
+    top: 0px;
+}
+
+.smallartwork #infolayer .info {
+    border: 1px solid #d2d2d2;
+    border-left: none;
+    top: 0;
+    left: 120px;
+}
+.noartwork #infolayer .info {
+    border: 1px solid #d2d2d2;
+    display: block;
+    top: 0;
+    left: 0;
+}
+
+.smallartwork #artarea {
+    height: 120px;
+    display: inline-block;
+    vertical-align: top;
+}
+.noartwork #artarea {
+    height: 120px;
+    display: inline-block;
+    vertical-align: top;
+}
+.smallartwork #nonartarea, .noartwork #nonartarea {
+    position: absolute;
+    top: 0;
+    vertical-align: top;
+    -disable-border-top-width: 1px;
+    border: none;
+}
+.smallartwork #big_play_button, .noartwork #big_play_button {
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    position: absolute;
+    left: auto;
+    bottom: 13px;
+    right: -177px;
+    z-index: 100;
+    width: 46px;
+    height: 46px;
+}
+.noartwork #big_play_button {
+    right: -57px;
+}
+
+.smallartwork #big_play_button:hover, .noartwork #big_play_button:hover {
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    background: transparent;
+}
+
+.smallartwork #artarea:hover #big_play_button, .noartwork #artarea:hover #big_play_button {
+    background: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+}
+.smallartwork #big_play_icon, .noartwork #big_play_icon {
+    border-color: transparent transparent transparent #333;
+    border-style: dotted dotted dotted solid; /* dotted for smooth rendering in ff */
+    *border-style: solid; /* ie 7 */
+    border-style: solid\9; /* ie 8/9 */
+    border-width: 10px 0px 10px 18px;
+    margin: 12px auto;
+    padding: 12px auto;
+}
+
+.smallartwork.playing #big_play_icon, .noartwork.playing #big_play_icon {
+    margin: 12px auto;
+    border-style: solid;
+    border-width: 0px 6px 0px 6px;
+    border-color: #333;
+    width: 16px;
+    height: 20px;
+    left: 0;
+}
+
+.smallartwork #timelinecontainer, .noartwork #timelinecontainer {
+    padding: 0 0 0 67px;
+}
+.smallartwork #currenttitlerow,
+.noartwork #currenttitlerow {
+    padding: 5px 2.86% 0 67px;
+}
+.smallartwork.standalonetrackplayer #currenttitlerow,
+.noartwork.standalonetrackplayer #currenttitlerow {
+    padding: 17px 2.86% 0 67px;
+}
+.smallartwork #currenttitle, .noartwork #currenttitle {
+    width: 70%;
+}
+.smallartwork #currenttimeblock, .noartwork #currenttimeblock {
+    width: 30%;
+}
+.hastracklist.smallartwork #timelinecontainer, .hastracklist.noartwork #timelinecontainer {
+    margin-top: 15px;
+}
+
+.hastracklist.smallartwork #prevnext, .hastracklist.noartwork #prevnext {
+    margin-top: 15px;
+}
+
+.noartwork #prevnext {
+    padding: 0 2.86%;
+}
+
+
+/*--------*/
+
+#tracklist::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    background-color: #efefef;
+}
+
+#tracklist::-webkit-scrollbar-thumb {
+    background-color: #c6c6c6;
+}
+
+#tracklist ul {
+    line-height: 0;
+}
+
+#tracklist li {
+    padding: 0;
+    border-bottom: 1px solid #f1f1f1;
+    font-size: 0px;
+    list-style: none;
+    cursor: pointer;
+}
+
+#tracklist li:last-child {
+    border-bottom: transparent;
+}
+
+.smallartwork #tracklist li:last-child,
+.noartwork #tracklist li:last-child {
+    border-bottom: 1px solid #f1f1f1;
+}
+
+#tracklist li:hover {
+    background-color: #f6f6f6;
+}
+
+#tracklist li .tracknum,
+#tracklist li .tracktitle,
+#tracklist li .currenttime,
+#tracklist li .tracktime {
+    display: inline-block;
+    line-height: 32px;
+    font-size: 12px;
+}
+
+#tracklist li .tracknum {
+    margin: 0 3% 0 0;
+    width: 5%;
+    text-align: right;
+    vertical-align: middle;
+}
+
+#tracklist li .tracktitle {
+    margin: 0 2% 0 0;
+    width: 65%;
+    overflow: hidden;
+    vertical-align: middle;
+}
+
+#tracklist li .currenttime {
+    margin: 0 1% 0 0;
+    width: 13%;
+    text-align: right;
+    visibility: hidden;
+    vertical-align: middle;
+    color: #999;
+    color: rgba(0,0,0,0.5);
+}
+
+#tracklist li .tracktime {
+    margin: 0;
+    width: 11%;
+    vertical-align: middle;
+    color: #999;
+    color: rgba(0,0,0,0.5);
+}
+
+#tracklist, 
+#tracklist a {
+    color: #333;
+}
+
+#tracklist .nostream, 
+#tracklist .nostream a,
+#tracklist li.nostream .tracktime {
+color: #ababab;
+opacity: 1;
+cursor: default;
+}
+
+.initialstate #tracklist li.currenttrack .currenttime {
+    visibility: hidden;
+}
+
+.inline_player a:hover {
+    text-decoration: underline;
+}
+
+#tracklist li.currenttrack .currenttime {
+    display: inline-block;
+    visibility: visible;
+    font-weight: normal;
+}
+
+#tracklist .currenttrack .currenttime::after {
+    content: " /";
+}
+
+#tracklist li.currenttrack .tracktime {
+    font-weight: normal;
+}
+
+#progbar_fill_played {
+    width: 0px;
+    display: block;
+    background: #888;
+}
+
+.initialstate #artarea .logo {
+/* don't show logo @ first */
+    opacity: 0;
+    animation: none;
+    -webkit-animation: none;
+}
+
+#artarea .logo {
+/* when not initialized, start the anim sequence */
+    opacity: 0;
+    animation: showlogo 5s ease;
+    -webkit-animation: showlogo 5s ease;
+    display: block;
+    position: absolute;
+    color: #000;
+    bottom: 6px;
+    right: 0;
+    width: 100px;
+    font-size: 13px;
+    font-weight: bold;
+    height: 25px;
+    margin: 0 2.86% 2.86% 0;
+}
+
+@keyframes showlogo {
+    0% { opacity: 0; }
+    20% { opacity: 1; }
+    80% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+@-webkit-keyframes showlogo {
+    0% { opacity: 0; }
+    20% { opacity: 1; }
+    80% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+#artarea .logo:hover {
+    opacity: 1;
+    -webkit-transition: opacity 100ms ease;
+    -moz-transition: opacity 100ms ease;
+    transition: opacity 100ms ease;
+}
+
+#artarea .logo .icon {
+    display: inline-block;
+    background-position: 0 -24px;
+    width: 100px;
+    height: 25px;
+    vertical-align: top;
+}
+
+/* size-specific styles */
+
+@media (max-width: 299px) {
+/* layout changes for large album art */
+
+    #linkarea {
+        display: none;
+    }
+    
+    #linkareaalt,
+    #sharealt {
+        display: inline-block;
+        visibility: visible;
+    }
+    
+    #infolayer.fixed {
+        position: relative;
+    }
+    .hastracklist #infolayer.fixed {
+        position: static;
+    }
+    
+    .has_info_slider #nonartarea {
+        position: static;
+    }
+    
+    .has_info_slider .logo,
+    .has_info_slider #logoalt,
+    .has_info_slider #linkareaalt  {
+        display: none;
+    }
+    .has_info_slider #logoalt2{
+        display: block;
+    }
+    .has_info_slider #linkarea {
+        display: inline-block;
+    }
+    
+    .initialstate .logo {
+        opacity: 1;
+    }
+    
+    #artarea .logo {
+        display: none;
+    }
+    
+    #logoalt {
+        display: inline-block;
+        float: right;
+        vertical-align: top;
+        width: 30px;
+        line-height: 2em;
+        font-size: 13px;
+        margin: -36px 10px 0 0;
+    }
+    .hastracklist #logoalt {
+        margin-top: 4px;
+    }
+    
+    #logoalt .icon,
+    #logoalt2 .icon {
+        display: inline-block;
+        opacity: 0.4;
+        width: 30px;
+        height: 10px;
+        line-height: 2em;
+        position: relative;
+        background-position: 0 0 ;
+        bottom: 0;
+        vertical-align: middle;
+    }
+    
+    #logoalt2 {
+        position: absolute;
+        right: 0;
+        bottom: 11px;
+        width: 30px;
+        line-height: 2em;
+        font-size: 13px;
+        margin: 0 10px 0 0;
+    }
+    
+    #infolayer {
+        padding-bottom: 40px;
+    }
+    .smallartwork #infolayer {
+        padding-bottom: 0;
+    }
+    
+    #big_play_button {
+        bottom: 10px;
+        left: 10px;
+    }
+    
+    #linkarea {
+        position: absolute;
+        bottom: 10px;
+        left: 0;
+    }
+    
+    #linkarea,
+    #linkareaalt {
+        margin: 0 0 0 10px;
+        text-align: left;
+        width: 68%;
+    }
+    
+    #linkareaalt,
+    .hastracklist #linkareaalt {
+        margin: -35px 0 0 10px;
+        position: absolute;
+    }
+    .hastracklist #linkareaalt {
+        margin-top: 5px;
+    }
+    
+    #buyordownload a,
+    #buyordownloadalt a {
+        padding: 0 0.3em 0 0;
+    }
+    
+    #maintext,
+    .download #maintext {
+        width: 100%;
+        padding: 0 8px 0 10px;
+        margin: 6px 0 0;
+    }
+    
+    #artist,
+    #album {
+        padding: 0 8px 0 10px;
+        width: 100%;
+    }
+    
+    #currenttitlerow {
+        margin: 6px 0 0;
+        line-height: 2em;
+        font-size: 0;
+        padding: 0 10px;
+        color: #333;
+    }
+    #currenttitle {
+        width:68%;
+    }
+    #currenttitle_title {
+        min-width:80%;
+        max-width:90%;
+        padding-right: 1%;
+        line-height: 2em;
+    }
+    .smallartwork #currenttitle_title,
+    .noartwork #currenttitle_title {
+        max-width: 96%;
+        min-width: 90%;
+    }
+    #currenttitle_tracknum {
+        max-width: 10%;
+        margin-right:2%;
+    }
+    #currenttimeblock {
+        width: 20%;
+    }
+    
+    #timelinecontainer {
+        width: 60%;
+        padding: 0 0 0 10px;
+    }
+    #prevnext {
+        width: 40%;
+        padding: 0 10px;
+        font-size: 0;
+    }
+    
+    .standalonetrackplayer #currenttimeblock {
+        margin-left: 65%;
+        width: 35%;
+    }
+    
+    .hastracklist #tracklist {
+        margin: 0 10px;
+    }
+
+    .hastracklist.smallartwork #nonartarea,
+    .hastracklist.noartwork #nonartarea {
+        padding-bottom: 40px;
+    }
+
+    .hastracklist.smallartwork #linkarea,
+    .hastracklist.noartwork #linkarea {
+        display: none;
+    }
+    
+    .hastracklist.smallartwork.download #maintext,
+    .hastracklist.noartwork.download #maintext {
+        width: 100%;
+        padding-right: 10px;
+    }
+    
+    .hastracklist.smallartwork #logoalt,
+    .hastracklist.noartwork #logoalt {
+        position: absolute;
+        right: 0;
+    }
+    
+    .hastracklist #nonartarea {
+        padding-bottom: 40px;
+    }
+    
+    .hastracklist #infolayer {
+        padding-bottom: 10px;
+    }
+    
+    #merch {
+        padding: 10px 10px 0 8px;
+    }
+    #merch .merchthumb:last-child {
+        margin-right: 0;
+    }
+    
+    .standalonetrackplayer #infolayer {
+        padding-bottom: 37px;
+    }
+    
+} /* end < 299px */
+
+
+@media (max-width: 199px) {
+    
+    #big_play_button {
+        width: 34px;
+        height: 34px;
+        left: 10px;
+        bottom: 10px;
+    }
+    #big_play_icon {
+        border-color: transparent transparent transparent #fff;
+        border-style: dashed dashed dashed solid; /* dashed for smooth rendering in ff */
+        border-width: 8px 0px 8px 14px;
+        margin: 9px auto;
+    }
+    .playing #big_play_icon {
+        margin: 9px auto;
+        border-style: solid;
+        border-width: 0px 4px 0px 4px;
+        border-color: #fff;
+        width: 12px;
+        height: 16px;
+        left: 0;
+    }
+    
+    #currenttitle {
+        width: 100%;
+    }
+    #currenttimeblock {
+        display: none;
+    }
+    
+    #prev {
+        width: 50%;
+        height: 20px;
+    }
+    #next {
+        width: 50%;
+        height: 20px;
+        padding-left: 10%;
+    }
+    
+    #prev .icon {
+        left: -8px;
+    }
+    #next .icon {
+        left: -1px;
+    }
+    
+    .standalonetrackplayer #currenttimeblock {
+        display: none;
+    }
+    .standalonetrackplayer #timelinecontainer {
+        top: 0;
+        margin: 0;
+        float: none;
+    }
+    .standalonetrackplayer #timelinecontainer {
+        width: 100%;
+        padding-right: 10px;
+    }
+    
+    #tracklist li .tracknum {
+        width: 10%;
+        margin-right: 4%;
+    }
+    #tracklist li .tracktitle {
+        width: 90%;
+        margin: 0;
+    }
+    #tracklist li .currenttime,
+    #tracklist li .tracktime {
+        display: none;
+    }
+    
+    .has_info_slider #currenttitlerow {
+        margin: 0;
+    }
+    .has_info_slider #timelinecontainer {
+        margin: 3px 0 0;
+    }
+    .has_info_slider #prevnext {
+        margin: 3px 0 0;
+        vertical-align: top;
+    }
+    .has_info_slider #infolayer {
+        padding-bottom: 30px;
+    }
+    .has_info_slider #linkarea {
+        bottom: 5px;
+    }
+    .has_info_slider #logoalt2 {
+        bottom: 6px;
+    }
+    
+    #logoalt {
+        margin-right: 8px;
+    }
+    #buyordownloadalt {
+        margin-right: 4%;
+    }
+    .download #buyordownloadalt {
+        margin-right: 0;
+    }
+    
+    
+} /* end < 199px */
+
+
+
+@media (min-width: 200px) and (max-width: 239px) {
+    #linkarea,
+    .download #linkarea {
+        width: 60%;
+    }
+    #big_play_button {
+        width: 38px;
+        height: 38px;
+        left: 10px;
+        bottom: 10px;
+    }
+    #big_play_icon {
+        border-color: transparent transparent transparent #fff;
+        border-style: dashed dashed dashed solid; /* dashed for smooth rendering in ff */
+        border-width: 8px 0px 8px 14px;
+        margin: 11px auto;
+    }
+    .playing #big_play_icon {
+        margin: 11px auto;
+        border-style: solid;
+        border-width: 0px 4px 0px 4px;
+        border-color: #fff;
+        width: 12px;
+        height: 16px;
+        left: 0;
+    }
+    #timelinecontainer {
+        width: 64%;
+    }
+    #prevnext {
+        width: 35%;
+    }
+    #prev {
+        width: 50%;
+        height: 20px;
+    }
+    #next {
+        width: 50%;
+        height: 20px;
+        padding-left: 10%;
+    }
+    #prev .icon {
+        left: -5px;
+    }
+    .standalonetrackplayer #timelinecontainer {
+        width: 62%;
+    }
+    #tracklist li .tracknum {
+        width: 7.5%;
+    }
+    #tracklist li .tracktitle {
+        width: 92%;
+    }
+    #tracklist li .currenttime,
+    #tracklist li .tracktime {
+        display: none;
+    }
+
+} /* end 200px-239px */
+
+
+@media (min-width: 240px) and (max-width: 299px) {
+    #linkarea,
+    .download #linkarea {
+        width: 50%;
+    }
+    
+    #currenttitle{
+        width: 70%;
+    }
+    
+    #currenttimeblock{
+        width: 30%;
+    }
+    
+    #timelinecontainer {
+        width: 70%;
+    }
+    #prevnext {
+        width: 29%;
+    }
+    #prev .icon {
+        left: -4px;
+    }
+    .standalonetrackplayer #currenttimeblock,
+    .albumtrackplayer #currenttimeblock {
+        margin-left: 67%;
+        width: 34%;
+    }
+    .standalonetrackplayer #timelinecontainer,
+    .albumtrackplayer #timelinecontainer {
+        width: 65%;
+    }
+    
+    #tracklist li .tracktitle {
+        width: 60%;
+    }
+    #tracklist li .currenttime {
+        width: 15%;
+    }
+    #tracklist li .tracktime {
+        width: 13%;
+    }
+    #tracklist li .tracknum {
+        width: 6%;
+    }
+    #tracklist li .tracktitle {
+        width: 56%;
+    }
+    #tracklist li .currenttime {
+        width: 17%;
+    }
+    #tracklist li .tracktime {
+        width: 14%;
+    }
+
+} /* end 240px-299px */
+
+
+/* smallart/horiz sizing */
+@media (min-width: 250px) and (max-width: 299px)  {
+    /* size 250-299 smallart/horiz */
+    
+    /* hide small artwork */
+    
+     .smallartwork #artlink, 
+     .smallartwork .art,
+     .noartwork #artlink, 
+     .noartwork .art {
+        display: none;
+    }
+    .smallartwork #artarea,
+    .noartwork #artarea {
+        width: 1px;
+    }
+    .smallartwork #nonartarea,
+    .noartwork #nonartarea {
+        padding: 0;
+    }
+    
+    /* hide logo */
+    .smallartwork #infolayer .logo,
+    .noartwork #infolayer .logo {
+        display: none;
+    }
+    
+    /* work out layout changes for big album art < 299 */
+    
+    .smallartwork #linkarea,
+    .noartwork #linkarea {
+        display: inline-block;
+    }
+    
+    .smallartwork #linkareaalt,
+    .smallartwork #sharealt,
+    .noartwork #linkareaalt,
+    .noartwork #sharealt {
+        display: none;
+    }
+    
+    .smallartwork.hastracklist #linkareaalt,
+    .smallartwork.hastracklist #sharealt,
+    .noartwork.hastracklist #linkareaalt,
+    .noartwork.hastracklist #sharealt {
+        display: inline-block;
+    }
+
+    .smallartwork #infolayer.fixed,
+    .noartwork #infolayer.fixed  {
+        position: static;
+    }
+    .smallartwork.hastracklist #infolayer.fixed,
+    .noartwork.hastracklist #infolayer.fixed {
+        position: static;
+    }
+    
+    .smallartwork #linkarea,
+    .noartwork #linkarea {
+        position: static;
+        bottom: auto;
+        left: auto;
+    }
+    
+    .smallartwork #logoalt,
+    .noartwork #logoalt {
+        display: none;
+    }
+
+    .smallartwork.hastracklist #logoalt,
+    .noartwork.hastracklist #logoalt {
+        display: block;
+    }
+
+
+    #buyordownload a {
+        padding: 0.7em;
+    }
+
+
+    /* scale elements */
+    
+     .smallartwork #maintext,
+     .noartwork #maintext {
+        width: 62%;
+        padding-right: 0;
+    }
+     .smallartwork.download #maintext,
+     .noartwork.download #maintext {
+        width: 52%;
+        padding-right: 0;
+    }
+    
+     .smallartwork #linkarea,
+     .noartwork #linkarea {
+        width: 33%;
+        margin: 0 0 0 3px;
+        text-align: right;
+    }
+
+     .smallartwork.download #linkarea,
+     .noartwork.download #linkarea {
+         width: 45%;
+         margin: 0 0 0 2%;
+    }
+
+     .smallartwork #currenttitle,
+     .noartwork #currenttitle {
+        width: 64%;
+    }
+     .smallartwork #currenttitle_title,
+     .noartwork #currenttitle_title {
+        width: 90%;
+        min-width: 90%;
+    }
+     .smallartwork #currenttimeblock,
+     .noartwork #currenttimeblock {
+        width: 32%;
+    }
+     .smallartwork #prevnext,
+     .noartwork #prevnext {
+        width: 30%;
+    }
+     .smallartwork #timelinecontainer,
+     .noartwork #timelinecontainer {
+        width: 70%;
+    }
+     .smallartwork.standalonetrackplayer #timelinecontainer,
+     .smallartwork.albumtrackplayer #timelinecontainer,
+     .noartwork.standalonetrackplayer #timelinecontainer,
+     .noartwork.albumtrackplayer #timelinecontainer {
+        width: 68%;
+    }
+    .smallartwork.standalonetrackplayer #currenttimeblock,
+    .smallartwork.albumtrackplayer #currenttimeblock,
+    .noartwork.standalonetrackplayer #currenttimeblock,
+    .noartwork.albumtrackplayer #currenttimeblock {
+        margin-left: 63%;
+        width: 32%;
+    }
+
+    /* hiding artwork causes adjustments to placement of info and playbutton */
+    .smallartwork #infolayer .info {
+        left: 0;
+        border-left: 1px solid #d2d2d2;
+    }
+    .smallartwork #big_play_button {
+        right: -57px;
+    }
+} /* end 250-299 smallart/horiz */
+
+
+@media (min-width: 300px) and (max-width: 349px) {
+    #linkarea{ width: 35%; }
+	#maintext{ width: 63%; }
+	.download #linkarea{ width: 40%; }
+	.download #maintext{ width: 60%; }
+	.smallartwork #linkarea{ width: 42%; }
+	.smallartwork #maintext{ width: 32%; }
+	.smallartwork.download #linkarea{ width: 67%; }
+	.smallartwork.download #maintext{ width: 7%; }
+	.noartwork #linkarea{ width: 25%; }
+	.noartwork #maintext{ width: 59%; }
+	.noartwork.download #linkarea{ width: 40%; }
+	.noartwork.download #maintext{ width: 44%; }
+
+    #currenttitle{
+        width: 70%;
+    }
+    
+    #currenttimeblock{
+        width: 30%;
+    }
+    
+    .standalonetrackplayer #currenttimeblock,
+    .albumtrackplayer #currenttimeblock {
+        margin-left: 67%;
+        width: 34%;
+    }
+    .standalonetrackplayer #timelinecontainer,
+    .albumtrackplayer #timelinecontainer {
+        width: 65%;
+    }
+    
+    #tracklist li .tracktitle {
+        width: 60%;
+    }
+    #tracklist li .currenttime {
+        width: 15%;
+    }
+    #tracklist li .tracktime {
+        width: 13%;
+    }
+} /* end 300px-349px */
+
+
+/* smallart/horiz sizing */
+@media (min-width: 300px) and (max-width: 329px) {
+    /* size 300 to 329 smallart/horiz */
+    
+    /* hide small artwork */
+    
+     .smallartwork #artlink, 
+     .smallartwork .art,
+     .noartwork #artlink, 
+     .noartwork .art {
+        display: none;
+    }
+    .smallartwork #artarea,
+    .noartwork #artarea {
+        width: 1px;
+    }
+    .smallartwork #nonartarea,
+    .noartwork #nonartarea {
+        padding: 0;
+    }
+    
+    /* hide logo */
+    .smallartwork #infolayer .logo,
+    .noartwork #infolayer .logo {
+        display: none;
+    }
+    
+    /* scale elements */
+    
+     .smallartwork #maintext,
+     .noartwork #maintext {
+        width: 70%;
+    }
+     .smallartwork.download #maintext,
+     .noartwork.download #maintext {
+        width: 61%;
+    }
+    .smallartwork.download #linkarea,
+    .noartwork.download #linkarea {
+        width: 37%;
+    }
+     .smallartwork #linkarea,
+     .noartwork #linkarea {
+        width: 28%;
+        padding: 0;
+    }
+    
+     .smallartwork #currenttitle,
+     .noartwork #currenttitle {
+        width: 68%;
+    }
+     .smallartwork #currenttitle_title,
+     .noartwork #currenttitle_title {
+        width: 90%;
+        min-width: 90%;
+    }
+     .smallartwork #currenttimeblock,
+     .noartwork #currenttimeblock {
+        width: 32%;
+    }
+     .smallartwork #prevnext,
+     .noartwork #prevnext {
+        width: 30%;
+    }
+     .smallartwork #timelinecontainer,
+     .noartwork #timelinecontainer {
+        width: 70%;
+    }
+     .smallartwork.standalonetrackplayer #timelinecontainer,
+     .smallartwork.albumtrackplayer #timelinecontainer,
+     .noartwork.standalonetrackplayer #timelinecontainer,
+     .noartwork.albumtrackplayer #timelinecontainer {
+        width: 72%;
+    }
+     .smallartwork.standalonetrackplayer #currenttimeblock,
+     .smallartwork.albumtrackplayer #currenttimeblock,
+     .noartwork.standalonetrackplayer #currenttimeblock,
+     .noartwork.albumtrackplayer #currenttimeblock {
+        margin-left: 69%;
+        width: 32%;
+    }
+    
+    /* hiding artwork causes adjustments to placement of info and playbutton */
+    .smallartwork #infolayer .info {
+        left: 0;
+        border-left: 1px solid #d2d2d2;
+    }
+    .smallartwork #big_play_button {
+        right: -57px;
+    }
+    
+    /* links logo down at bottom for tracklist players */
+
+    .hastracklist.smallartwork #nonartarea,
+    .hastracklist.noartwork #nonartarea {
+        padding-bottom: 40px;
+    }
+
+    .hastracklist.smallartwork #linkarea,
+    .hastracklist.noartwork #linkarea {
+        display: none;
+    }
+    
+    .hastracklist.smallartwork #maintext,
+    .hastracklist.noartwork #maintext {
+        width: 100%;
+        padding-right: 10px;
+    }
+    
+    .hastracklist.smallartwork #linkareaalt,
+    .hastracklist.noartwork #linkareaalt  {
+        margin: 0 0 0 10px;
+        text-align: left;
+        width: 68%;
+    }
+    
+    .hastracklist.smallartwork #buyordownloadalt a,
+    .hastracklist.noartwork #buyordownloadalt a  {
+        padding: 0 0.3em 0 0;
+    }
+    
+    .hastracklist.smallartwork #infolayer .logo,
+    .hastracklist.noartwork #infolayer .logo {
+        display: none;
+    }
+    
+    .hastracklist.smallartwork #logoalt,
+    .hastracklist.noartwork #logoalt {
+        position: absolute;
+        right: 0;
+        display: block;
+    }
+    
+    .hastracklist.smallartwork #logoalt,
+    .hastracklist.noartwork #logoalt {
+        display: inline-block;
+        float: right;
+        vertical-align: top;
+        width: 30px;
+        line-height: 2em;
+        font-size: 13px;
+        margin: 4px 10px 0 0;
+    }
+    
+    .hastracklist.smallartwork #logoalt .icon,
+    .hastracklist.noartwork #logoalt .icon {
+        display: inline-block;
+        opacity: 0.4;
+        width: 30px;
+        height: 10px;
+        line-height: 2em;
+        position: relative;
+        background-position: 0 0 ;
+        bottom: 0;
+        vertical-align: middle;
+    }
+    
+    /* dark */
+    
+    .hastracklist.smallartwork #linkareaalt,
+    .hastracklist.noartwork #linkareaalt {
+        margin: -35px 0 0 10px;
+        position: absolute;
+    }
+    .hastracklist.smallartwork #linkareaalt,
+    .hastracklist.noartwork #linkareaalt {
+        margin-top: 5px;
+    }
+    
+    #buyordownload a,
+    #buyordownloadalt a {
+        padding: 0 0.3em 0 0;
+    }
+
+    
+    .smallartwork.hastracklist #linkareaalt,
+    .smallartwork.hastracklist #sharealt,
+    .noartwork.hastracklist #linkareaalt,
+    .noartwork.hastracklist #sharealt {
+        display: inline-block;
+        position: absolute;
+    }
+
+
+    
+} /* end 300-329 smallart/horiz */
+
+
+@media (min-width: 350px) and (max-width: 399px) {
+    #linkarea{ width: 29%; }
+	#maintext{ width: 70%; }
+	.download #linkarea{ width: 34%; }
+	.download #maintext{ width: 66%; }
+	.smallartwork #linkarea{ width: 25%; }
+	.smallartwork #maintext{ width: 47%; }
+	.smallartwork.download #linkarea{ width: 39%; }
+	.smallartwork.download #maintext{ width: 39%; margin-right: 1%;}
+	.smallartwork #currenttitle { width: 63%; }
+	.smallartwork #currenttitle_title { width: 90%; min-width: 90%; }
+	.smallartwork #prevnext { width: 30%; }
+	.smallartwork #timelinecontainer { width: 70%; }
+    .smallartwork.standalonetrackplayer #timelinecontainer,
+    .noartwork.standalonetrackplayer #timelinecontainer {
+        width: 66%;
+    }
+    .smallartwork.standalonetrackplayer #currenttimeblock,
+    .noartwork.standalonetrackplayer #currenttimeblock {
+        margin-left: 63%;
+        width: 32%;
+    }
+	.noartwork #linkarea{ width: 27%; }
+	.noartwork #maintext{ width: 61%; }
+	.noartwork.download #linkarea{ width: 32%; }
+	.noartwork.download #maintext{ width: 54%; margin-right: 1%; } 
+
+    #tracklist li .tracknum {
+        margin: 0 3% 0 0;
+        width: 5%;
+    }
+    #tracklist li .tracktitle {
+        margin: 0 2% 0 0;
+        width: 65%;
+    }
+    #tracklist li .currenttime {
+        margin: 0 1% 0 0;
+        width: 13%;
+    }
+    #tracklist li .tracktime {
+        width: 11%;
+    }
+}
+
+
+/* smallart/horiz sizing */
+@media (min-width: 330px) and (max-width: 369px) {
+    /* size 330 to 369, smallart/horiz */
+    
+    /* hide small artwork */
+    
+     .smallartwork #artlink, 
+     .smallartwork .art,
+     .noartwork #artlink, 
+     .noartwork .art {
+        display: none;
+    }
+    .smallartwork #artarea,
+    .noartwork #artarea {
+        width: 1px;
+    }
+    .smallartwork #nonartarea,
+    .noartwork #nonartarea {
+        padding: 0;
+    }
+    
+    /* scale elements */
+    
+     .smallartwork #maintext,
+     .noartwork #maintext {
+        width: 58%;
+    }
+     .smallartwork.download #maintext,
+     .noartwork.download #maintext {
+        width: 50%;
+    }
+     .smallartwork #linkarea,
+     .noartwork #linkarea {
+        width: 26%;
+        padding: 0;
+    }
+    .smallartwork.download #linkarea,
+    .noartwork.download #linkarea {
+        width: 34%;
+    }
+    
+     .smallartwork #currenttitle,
+     .noartwork #currenttitle {
+        width: 68%;
+    }
+     .smallartwork #currenttitle_title,
+     .noartwork #currenttitle_title {
+        width: 90%;
+        min-width: 90%;
+    }
+     .smallartwork #currenttimeblock,
+     .noartwork #currenttimeblock {
+        width: 32%;
+    }
+     .smallartwork #prevnext,
+     .noartwork #prevnext {
+        width: 30%;
+    }
+     .smallartwork #timelinecontainer,
+     .noartwork #timelinecontainer {
+        width: 70%;
+    }
+     .smallartwork.standalonetrackplayer #timelinecontainer,
+     .smallartwork.albumtrackplayer #timelinecontainer,
+     .noartwork.standalonetrackplayer #timelinecontainer,
+     .noartwork.albumtrackplayer #timelinecontainer {
+        width: 72%;
+    }
+     .smallartwork.standalonetrackplayer #currenttimeblock,
+     .smallartwork.albumtrackplayer #currenttimeblock,
+     .noartwork.standalonetrackplayer #currenttimeblock,
+     .noartwork.albumtrackplayer #currenttimeblock {
+        margin-left: 69%;
+        width: 32%;
+    }
+    /* hiding artwork causes adjustments to placement of info and playbutton */
+    .smallartwork #infolayer .info {
+        left: 0;
+        border-left: 1px solid #d2d2d2;
+    }
+    .smallartwork #big_play_button {
+        right: -57px;
+    }
+    
+} /* end 330-369 smallart/horiz */
+
+
+
+@media (min-width: 400px) and (max-width: 449px) {
+    #linkarea{ width: 25%; }
+	#maintext{ width: 74%; }
+	.download #linkarea{ width: 30%; }
+	.download #maintext{ width: 70%; }
+	.smallartwork #linkarea{ width: 34%; }
+	.smallartwork #maintext{ width: 48%; }
+	.smallartwork.download #linkarea{ width: 43%; }
+	.smallartwork.download #maintext{ width: 40%; }
+	.smallartwork #currenttitle { width: 68%; }
+	.smallartwork #currenttitle_title { width: 90%; min-width: 90%; }
+    .smallartwork #currenttimeblock { width: 32%; }
+	.smallartwork #prevnext { width: 26%; padding: 0 2.86%; }
+	.smallartwork #timelinecontainer { width: 74%; }
+    .smallartwork.standalonetrackplayer #timelinecontainer {
+        width: 70%;
+    }
+    .smallartwork.standalonetrackplayer #currenttimeblock {
+        margin-left: 67%;
+        width: 33%;
+    }
+	.noartwork #linkarea{ width: 27%; }
+	.noartwork #maintext{ width: 61%; }
+	.noartwork.download #linkarea{ width: 32%; }
+	.noartwork.download #maintext{ width: 56%; }
+	.noartwork #timelinecontainer { width: 77%; }
+	.noartwork #prevnext { width: 23%; }
+	.noartwork #prev { padding-left: 10%; }
+	.noartwork #currenttitle { width: 76%; }
+    .noartwork #currenttimeblock { width: 24%; }
+    .noartwork #timelinecontainer { width: 77%; }
+    .noartwork.standalonetrackplayer #timelinecontainer {
+        width: 77%;
+    }
+    .noartwork.standalonetrackplayer #currenttimeblock {
+        margin-left: 77%;
+        width: 23%;
+    }
+
+    .standalonetrackplayer #currenttimeblock,
+    .albumtrackplayer #currenttimeblock {
+        margin-left: 78%;
+        width: 22%;
+    }
+    .standalonetrackplayer #timelinecontainer,
+    .albumtrackplayer #timelinecontainer {
+        width: 75%;
+    }
+    #prevnext {
+        width: 21%;
+        padding: 0 2.86% 0 0;
+    }
+    #prev {
+    }
+    #timelinecontainer {
+        width: 78.5%;
+    }
+    
+    #tracklist li .tracknum {
+        margin: 0 2% 0 0;
+        width: 5%;
+    }
+    #tracklist li .tracktitle {
+        margin: 0 2% 0 0;
+        width: 67%;
+    }
+    #tracklist li .currenttime {
+        margin: 0 1% 0 0;
+        width: 12%;
+    }
+    #tracklist li .tracktime {
+        width: 11%;
+    }
+
+} /* end 400px-449px */
+
+
+@media (min-width: 450px) and (max-width: 499px) {
+    #linkarea{ width: 24%; }
+	#maintext{ width: 75%; }
+	.download #linkarea{ width: 27%; }
+	.download #maintext{ width: 73%; }
+	.smallartwork #linkarea{ width: 31%; }
+	.smallartwork #maintext{ width: 54%; }
+	.smallartwork.download #linkarea{ width: 40%; }
+	.smallartwork.download #maintext{ width: 45%; padding-left: 2%; }
+	.smallartwork #currenttitle { width: 70%; }
+    .smallartwork #currenttimeblock { width: 30%; }
+	.smallartwork #prevnext { width: 26%; padding: 0 2.86%; }
+	.smallartwork #prev { padding-left: 0; }
+	.smallartwork #timelinecontainer { width: 74%; }
+    .smallartwork.standalonetrackplayer #timelinecontainer {
+        width: 74%;
+    }
+    .smallartwork.standalonetrackplayer #currenttimeblock {
+        margin-left: 74%;
+        width: 26%;
+    }
+	.noartwork #linkarea{ width: 25%; }
+	.noartwork #maintext{ width: 64%; }
+	.noartwork.download #linkarea{ width: 30%; }
+	.noartwork.download #maintext{ width: 59%; } 
+    .noartwork #prevnext { width: 21%; }
+    .noartwork #currenttitle { width: 78%; }
+    .noartwork #currenttimeblock { width: 22%; }
+    .noartwork #timelinecontainer { width: 79%; }
+    .noartwork.standalonetrackplayer #currenttimeblock {
+        margin-left: 79%;
+        width: 21%;
+    }
+
+
+    .standalonetrackplayer #currenttimeblock,
+    .albumtrackplayer #currenttimeblock {
+        margin-left: 81%;
+        width: 19%;
+    }
+    .standalonetrackplayer #timelinecontainer,
+    .albumtrackplayer #timelinecontainer {
+        width: 79%;
+    }
+    #prevnext {
+        width: 21%;
+        padding: 0 2.86% 0 0;
+    }
+    #prev {
+        padding-left: 10%;
+    }
+    .smallartwork #prev,
+    .noartwork #prev {
+        padding-left: 0;
+    }
+    #timelinecontainer {
+        width: 78.5%;
+    }
+    
+    #tracklist li .tracknum {
+        margin: 0 2% 0 0;
+        width: 5%;
+    }
+    #tracklist li .tracktitle {
+        margin: 0 2% 0 0;
+        width: 71%;
+    }
+    #tracklist li .currenttime {
+        margin: 0 1% 0 0;
+        width: 10%;
+    }
+    #tracklist li .tracktime {
+        width: 9%;
+    }
+
+
+} /* end 450px-499px */
+
+@media (min-width: 500px) and (max-width: 549px) {
+    #linkarea{ width: 24%; }
+	#maintext{ width: 75%; }
+	.download #linkarea{ width: 24%; }
+	.download #maintext{ width: 76%; }
+	.smallartwork #linkarea{ width: 27%; }
+	.smallartwork #maintext{ width: 60%; }
+	.smallartwork.download #linkarea{ width: 35%; }
+	.smallartwork.download #maintext{ width: 52%; }
+	.smallartwork #currenttitle { width: 68%; }
+    .smallartwork #currenttimeblock { width: 32%; }
+	.smallartwork #prevnext { width: 26%; padding: 0 2.86%; }
+	.smallartwork #timelinecontainer { width: 75%; }
+    .smallartwork.standalonetrackplayer #timelinecontainer {
+        width: 78%;
+    }
+    .smallartwork.standalonetrackplayer #currenttimeblock {
+        margin-left: 78%;
+        width: 22%;
+    }
+	.noartwork #linkarea{ width: 25%; }
+	.noartwork #maintext{ width: 65%; }
+	.noartwork.download #linkarea{ width: 27%; }
+	.noartwork.download #maintext{ width: 63%; } 
+    .noartwork #prevnext { width: 19%; }    
+    .noartwork #timelinecontainer { width: 81%; } 
+    .noartwork #currenttitle { width: 80%; }
+    .noartwork #currenttimeblock { width: 19%; }
+    .noartwork.standalonetrackplayer #currenttimeblock { margin-left: 81%; }
+
+    .standalonetrackplayer #currenttimeblock,
+    .albumtrackplayer #currenttimeblock {
+        margin-left: 83%;
+        width: 17%;
+    }
+    .standalonetrackplayer #timelinecontainer,
+    .albumtrackplayer #timelinecontainer {
+        width: 81%;
+    }
+    .noartwork.standalonetrackplayer #currenttimeblock {
+        width: 19%;
+    }
+    #prevnext {
+        width: 19%;
+        padding: 0 2.86% 0 0;
+    }
+    #prev {
+        padding-left: 10%;
+    }
+    .smallartwork #prev,
+    .noartwork #prev {
+        padding-left: 0;
+    }
+    #timelinecontainer {
+        width: 80.5%;
+    }
+    .merchthumb {
+        margin-right: 3%;
+    }
+    
+    #tracklist li .tracknum {
+        margin: 0 2% 0 0;
+        width: 4%;
+    }
+    #tracklist li .tracktitle {
+        margin: 0 2% 0 0;
+        width: 74%;
+    }
+    #tracklist li .currenttime {
+        margin: 0 1% 0 0;
+        width: 9%;
+    }
+    #tracklist li .tracktime {
+        width: 8%;
+    }
+
+
+} /* end 500px-549px */
+
+
+
+@media (min-width: 550px) and (max-width: 600px) {
+    #linkarea{ width: 20%; }
+	#maintext{ width: 79%; }
+	.download #linkarea{ width: 22%; }
+	.download #maintext{ width: 78%; }
+	.smallartwork #linkarea{ width: 25%; }
+	.smallartwork #maintext{ width: 63%; }
+	.smallartwork.download #linkarea{ width: 30%; padding-left: 2%; }
+	.smallartwork.download #maintext{ width: 58%; }
+	.smallartwork #currenttitle { width: 78%; }
+    .smallartwork #currenttimeblock { width: 22%; }
+	.smallartwork #prevnext { width: 22%; padding: 0 2.86%; }
+	.smallartwork #timelinecontainer { width: 78%; }
+    .smallartwork.standalonetrackplayer #timelinecontainer {
+        width: 80%;
+    }
+    .smallartwork.standalonetrackplayer #currenttimeblock {
+        margin-left: 81%;
+        width: 19%;
+    }
+	.noartwork #linkarea{ width: 20%; }
+	.noartwork #maintext{ width: 71%; }
+	.noartwork.download #linkarea{ width: 24%; }
+	.noartwork.download #maintext{ width: 67%; } 
+    .noartwork #prevnext { width: 17%; }    
+    .noartwork #currenttitle { width: 83%; } 
+    .noartwork #currenttimeblock { width: 16%; } 
+    .noartwork #timelinecontainer { width: 83%; } 
+    .noartwork.standalonetrackplayer #currenttimeblock { margin-left: 84%; }
+
+    .standalonetrackplayer #currenttimeblock,
+    .albumtrackplayer #currenttimeblock {
+        margin-left: 85%;
+        width: 15%;
+    }
+    .standalonetrackplayer #timelinecontainer,
+    .albumtrackplayer #timelinecontainer {
+        width: 83%;
+    }
+    .noartwork.standalonetrackplayer #currenttimeblock {
+        width: 16%;
+    }
+    #prevnext {
+        width: 17%;
+        padding: 0 2.86% 0 0;
+    }
+    #prev {
+        padding-left: 10%;
+    }
+    .smallartwork #prev,
+    .noartwork #prev {
+        padding-left: 0;
+    }
+    #timelinecontainer {
+        width: 82.5%;
+    }
+    .merchthumb {
+        margin-right: 3%;
+    }
+    
+    #tracklist li .tracknum,
+    .noartwork #tracklist li .tracknum {
+        margin: 0 2% 0 0;
+        width: 3%;
+    }
+    #tracklist li .tracktitle {
+        margin: 0 2% 0 0;
+        width: 77%;
+    }
+    #tracklist li .currenttime {
+        margin: 0 1% 0 0;
+        width: 8%;
+    }
+    #tracklist li .tracktime {
+        width: 7%;
+    }
+
+
+} /* end 550px-600px */
+
+
+@media (min-width: 601px) {
+    #linkarea{ width: 20%; }
+	#maintext{ width: 79%; }
+	.download #linkarea{ width: 20%; }
+	.download #maintext{ width: 80%; }
+	.smallartwork #linkarea{ width: 22%; }
+	.smallartwork #maintext{ width: 68%; }
+	.smallartwork.download #linkarea{ width: 25%; }
+	.smallartwork.download #maintext{ width: 65%; }
+	.smallartwork #currenttitle { width: 80%; }
+    .smallartwork #currenttimeblock { width: 20%; }
+	.smallartwork #prevnext { width: 20%; padding: 0 2.86%; }
+	.smallartwork #timelinecontainer { width: 80%; }
+    .smallartwork.standalonetrackplayer #timelinecontainer {
+        width: 82%;
+    }
+    .smallartwork.standalonetrackplayer #currenttimeblock {
+        margin-left: 83%;
+        width: 17%;
+    }
+	.noartwork #linkarea{ width: 18%; }
+	.noartwork #maintext{ width: 73%; }
+	.noartwork.download #linkarea{ width: 21%; }
+	.noartwork.download #maintext{ width: 71%; } 
+    .noartwork #prevnext { width: 17%; } 
+    .noartwork #currenttitle { width: 85%; } 
+    .noartwork #currenttimeblock { width: 15%; } 
+    .noartwork #timelinecontainer { width: 83%; } 
+    .noartwork.standalonetrackplayer #currenttimeblock { margin-left: 85%; }
+
+    #currenttimeblock {
+        width: 19.2%;
+    }
+    .standalonetrackplayer #currenttimeblock,
+    .albumtrackplayer #currenttimeblock {
+        margin-left: 85%;
+        width: 15%;
+    }
+    .standalonetrackplayer #timelinecontainer,
+    .albumtrackplayer #timelinecontainer {
+        width: 83%;
+    }
+    #prevnext {
+        width: 17%;
+        padding: 0 2.86% 0 0;
+    }
+    #prev {
+        padding-left: 10%;
+    }
+    .smallartwork #prev,
+    .noartwork #prev {
+        padding-left: 0;
+    }
+    #timelinecontainer {
+        width: 82.5%;
+    }
+    .merchthumb {
+        margin-right: 3%;
+    }
+
+    #tracklist li .tracknum {
+        margin: 0 2% 0 0;
+        width: 3%;
+    }
+    #tracklist li .tracktitle {
+        margin: 0 2% 0 0;
+        width: 79%;
+    }
+    #tracklist li .currenttime {
+        margin: 0 1% 0 0;
+        width: 7%;
+    }
+    #tracklist li .tracktime {
+        width: 6%;
+    }
+
+
+} /* end 601px-700px */
+
+
+/* theme dark */
+
+.theme-dark #logoalt .icon,
+.theme-dark #logoalt2 .icon,
+.theme-dark.hastracklist #logoalt .icon,
+.theme-dark.hastracklist #logoalt2 .icon {
+    background-position: 0 -10px;
+}
+
+.theme-dark .art {
+    outline: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.theme-dark #nonartarea {
+    border:1px solid #262626;
+    border:1px solid rgba(255,255,255,0.15);
+    border-top: 0;
+    background-color: #303030;
+}
+
+.theme-dark #infolayer {
+    background-color: #303030;    
+}
+
+.theme-dark #artist,
+.theme-dark #album {
+    color: #999;
+}
+
+.theme-dark #currenttitle_title {
+    color: #999;
+}
+
+.theme-dark #tracklist, 
+.theme-dark #tracklist a {
+    color: #666;
+}
+
+.theme-dark #tracklist .nostream, 
+.theme-dark #tracklist .nostream a,
+.theme-dark #tracklist li.nostream .tracktime {
+    color: #444;
+}
+
+.theme-dark #tracklist .currenttrack,
+.theme-dark #tracklist .currenttrack a {
+    color: #999;
+    background-color:rgba(0,0,0,0.15);
+}
+
+.theme-dark #prev:hover .icon {
+    border-color: transparent #ccc transparent transparent;
+}
+.theme-dark #prev:hover .icon:before {
+    border-color: transparent #ccc transparent transparent;
+}
+.theme-dark #prev:hover .icon:after {
+    background-color:#ccc;
+}
+.theme-dark #next:hover .icon:before {
+    border-color: transparent transparent transparent #ccc;
+}
+.theme-dark #next:hover .icon:after {
+    background-color:#ccc;
+}
+.theme-dark #next:hover .icon {
+    border-color: transparent transparent transparent #ccc;
+}
+
+.theme-dark #currenttitle_tracknum {
+    color: #999;
+}
+
+.theme-dark #currenttime,
+.theme-dark #totaltime,
+.theme-dark.inline_player #totaltime:before {
+    color: #999;
+}
+
+.theme-dark #tracklist li .tracktime {
+    color: #555;
+    color: rgba(255,255,255,0.3);
+}
+
+.theme-dark #tracklist li .currenttime {
+    color: #555;
+    color: rgba(255,255,255,0.3);
+}
+
+.theme-dark #tracklist {
+    border: 1px solid #393939;
+    border-right: 0;
+    border-left: 0;
+}
+
+.theme-dark #tracklist li {
+    border-bottom: 1px solid #393939;
+}
+
+.theme-dark #tracklist li:last-child {
+    border-bottom: transparent;
+}
+
+.theme-dark #tracklist li:hover {
+    background-color: #222;
+}
+
+.theme-dark.inline_player .progbar_empty {
+    border-color: #393939;
+}
+
+.theme-dark.inline_player.playing .progbar_empty {
+    border-color: #474747;
+}
+
+.theme-dark.inline_player .progbar_fill {
+    background: #222;
+}
+
+.theme-dark.inline_player .thumb {
+    background: #474747;
+    border-color: #525252;
+}
+
+.theme-dark.playing .thumb {
+    background: #888;
+    border-color: #888;
+}
+
+.theme-dark.thumb.ui-draggable-dragging {
+    border: solid 1px #0687f5;
+    background: #fff;
+}
+
+.theme-dark #progbar_fill_played {
+    background: #111;
+}
+
+
+.theme-dark #tracklist::-webkit-scrollbar {
+    background-color: #393939;
+}
+
+.theme-dark #tracklist::-webkit-scrollbar-thumb {
+    background-color: #525252;
+}
+
+/* small art */
+
+.theme-dark.hastracklist.smallartwork #nonartarea, 
+.theme-dark.hastracklist.noartwork #nonartarea {
+    border-color:1px solid #4e4e4e;
+    border:1px solid rgba(255,255,255,0.15);
+}
+
+.theme-dark.hastracklist.smallartwork #tracklist li:last-child,
+.theme-dark.hastracklist.noartwork #tracklist li:last-child {
+    border-color: #393939;
+}
+
+.theme-dark.hastracklist.smallartwork #infolayer .info,
+.theme-dark.hastracklist.noartwork #infolayer .info {
+    border-color: #393939;
+}
+
+.theme-dark.smallartwork #nonartarea, 
+.theme-dark.noartwork #nonartarea {
+    border: 0;
+}
+
+.theme-dark.smallartwork #infolayer .info,
+.theme-dark.noartwork #infolayer .info {
+    border-color: #4e4e4e;
+    border-color: rgba(255,255,255,0.15);
+}
+
+
+.theme-dark.smallartwork #big_play_button,
+.theme-dark.noartwork #big_play_button,
+.theme-dark.smallartwork #artarea:hover #big_play_button,
+.theme-dark.noartwork #artarea:hover #big_play_button {
+    background: #474747;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.theme-dark.smallartwork #big_play_button:hover,
+.theme-dark.noartwork #big_play_button:hover {
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    background: #474747;
+}
+
+.theme-dark.smallartwork #big_play_icon,
+.theme-dark.noartwork #big_play_icon {
+    border-color: transparent transparent transparent #d3d3d2;
+    border-style: dashed dashed dashed solid; /* dashed for smooth rendering in ff */
+    border-width: 10px 0px 10px 18px;
+    margin: 12px auto;
+    padding: 12px auto;
+}
+
+.theme-dark.smallartwork.playing #big_play_icon,
+.theme-dark.noartwork.playing #big_play_icon {
+    margin: 12px auto;
+    border-style: solid;
+    border-width: 0px 6px 0px 6px;
+    border-color: #d3d3d2;
+    width: 16px;
+    height: 20px;
+    left: 0;
+}
+
+
+/* twittercard */
+.twittercard #big_play_button {
+    visibility: visible;
+    width: 50px;
+    height: 50px;
+    background: #000;
+    background: rgba(0,0,0,0.85);
+    position: absolute;
+    left: 45%;
+    top: 45%;
+    cursor: pointer;
+    -moz-border-radius:2px;
+    -webkit-border-radius: 2px;
+    border-radius:2px;
+    
+}
