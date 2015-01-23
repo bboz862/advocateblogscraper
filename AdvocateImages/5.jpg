@@ -13,8 +13,8 @@
 <link rel="stylesheet" id="cf_styles-css" href="/cdn-cgi/styles/cf.errors.css" type="text/css" media="screen,projection" />
 <!--[if lt IE 9]><link rel="stylesheet" id='cf_styles-ie-css' href="/cdn-cgi/styles/cf.errors.ie.css" type="text/css" media="screen,projection" /><![endif]-->
 <style type="text/css">body{margin:0;padding:0}</style>
-<!--[if lt IE 9]><script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script><![endif]-->
-<!--[if gte IE 9]><!--><script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/zepto/1.0/zepto.min.js"></script><!--<![endif]-->
+<!--[if lte IE 9]><script type="text/javascript" src="/cdn-cgi/scripts/jquery.min.js"></script><![endif]-->
+<!--[if gte IE 10]><!--><script type="text/javascript" src="/cdn-cgi/scripts/zepto.min.js"></script><!--<![endif]-->
 <script type="text/javascript" src="/cdn-cgi/scripts/cf.common.js"></script>
 
 </head>
@@ -26,7 +26,7 @@
         <h1>
           <span class="cf-error-type" data-translate="error">Error</span>
           <span class="cf-error-code">1010</span>
-          <small class="heading-ray-id">Ray ID: 17a0d6239dad076d</small>
+          <small class="heading-ray-id">Ray ID: 1acfcfcdba4c13ef &bull; 2015-01-23 00:18:02 UTC</small>
         </h1>
         <h2 class="cf-subheadline" data-translate="error_desc">Access denied</h2>
       </div><!-- /.header -->
@@ -37,7 +37,7 @@
         <div class="cf-columns two">
           <div class="cf-column">
             <h2 data-translate="what_happened">What happened?</h2>
-            <p>The owner of this website (makeyourideasart.com) has banned your access based on your browser's signature (17a0d6239dad076d-ua48).</p>
+            <p>The owner of this website (makeyourideasart.com) has banned your access based on your browser's signature (1acfcfcdba4c13ef-ua48).</p>
           </div>
 
           
@@ -46,11 +46,11 @@
 
       <div class="cf-error-footer cf-wrapper">
   <p>
-    <span class="cf-footer-item">CloudFlare Ray ID: <strong>17a0d6239dad076d</strong></span>
+    <span class="cf-footer-item">CloudFlare Ray ID: <strong>1acfcfcdba4c13ef</strong></span>
     <span class="cf-footer-separator">&bull;</span>
-    <span class="cf-footer-item"><span data-translate="your_ip">Your IP</span>: 65.112.10.206</span>
+    <span class="cf-footer-item"><span data-translate="your_ip">Your IP</span>: 190.222.250.250</span>
     <span class="cf-footer-separator">&bull;</span>
-    <span class="cf-footer-item"><span data-translate="performance_security_by">Performance &amp; security by</span> <a data-orig-proto="https" data-orig-ref="www.cloudflare.com/5xx-error-landing" id="cloudflare_link" target="_blank">CloudFlare</a></span>
+    <span class="cf-footer-item"><span data-translate="performance_security_by">Performance &amp; security by</span> <a data-orig-proto="https" data-orig-ref="www.cloudflare.com/5xx-error-landing" id="brand_link" target="_blank">CloudFlare</a></span>
     
   </p>
 </div><!-- /.error-footer -->
