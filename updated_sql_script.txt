@@ -1,0 +1,67 @@
+LOAD DATA INFILE "/Users/brendan/Projects/advocateblogscraper/themes.csv"
+INTO TABLE advoblog_theme
+COLUMNS TERMINATED BY ','
+OPTIONALLY ENCLOSED BY '"'
+ESCAPED BY '"'
+LINES TERMINATED BY '\r\n';
+
+
+
+LOAD DATA INFILE "/Users/brendan/Projects/advocateblogscraper/blogmetadata.csv"
+INTO TABLE advoblog_post
+COLUMNS TERMINATED BY ','
+OPTIONALLY ENCLOSED BY '"'
+ESCAPED BY '"'
+LINES TERMINATED BY '\r\n'
+(id,title,slug,body,created,theme_id);
+
+
+LOAD DATA INFILE "/Users/brendan/Projects/advocateblogscraper/imageinfo.csv"
+INTO TABLE advoblog_images
+COLUMNS TERMINATED BY ','
+OPTIONALLY ENCLOSED BY '"'
+ESCAPED BY '"'
+LINES TERMINATED BY '\r\n';
+
+
+
+LOAD DATA INFILE "/Users/brendan/Projects/advocateblogscraper/categories.csv"
+INTO TABLE advoblog_category
+COLUMNS TERMINATED BY ','
+OPTIONALLY ENCLOSED BY '"'
+ESCAPED BY '"'
+LINES TERMINATED BY '\r\n';
+
+LOAD DATA INFILE "/Users/brendan/Projects/advocateblogscraper/tags.csv"
+INTO TABLE advoblog_tag
+COLUMNS TERMINATED BY ','
+OPTIONALLY ENCLOSED BY '"'
+ESCAPED BY '"'
+LINES TERMINATED BY '\r\n';
+
+
+
+LOAD DATA INFILE "/Users/brendan/Projects/advocateblogscraper/blogpost_tag_relation.csv"
+INTO TABLE advoblog_post_tags
+COLUMNS TERMINATED BY ','
+OPTIONALLY ENCLOSED BY '"'
+ESCAPED BY '"'
+LINES TERMINATED BY '\r\n'
+(post_id,tag_id);
+
+
+LOAD DATA INFILE "/Users/brendan/Projects/advocateblogscraper/blogpost_category_relation.csv"
+INTO TABLE advoblog_post_posted
+COLUMNS TERMINATED BY ','
+OPTIONALLY ENCLOSED BY '"'
+ESCAPED BY '"'
+LINES TERMINATED BY '\r\n'
+(post_id, category_id);
+
+LOAD DATA INFILE "/Users/brendan/Projects/advocateblogscraper/blogpost_category_relation.csv"
+INTO TABLE advoblog_post_posted
+COLUMNS TERMINATED BY ','
+OPTIONALLY ENCLOSED BY '"'
+ESCAPED BY '"'
+LINES TERMINATED BY '\r\n'
+(post_id, category_id);
