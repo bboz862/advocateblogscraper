@@ -2810,6 +2810,8 @@ JetpackSlideshow.prototype.init = function() {
 		var imageInfo = this.images[i];
 		var img = document.createElement( 'img' );
 		img.src = imageInfo.src + '?w=' + this.width;
+		img.title = imageInfo.title;
+		img.alt = imageInfo.alt;
 		img.align = 'middle';
 		var caption = document.createElement( 'div' );
 		caption.className = 'slideshow-slide-caption';
@@ -2888,11 +2890,18 @@ JetpackSlideshow.prototype.finishInit_ = function() {
 		} );
 
 		var controls = jQuery( this.controlsDiv_ );
-		slideshow.mouseenter( function() {
-			controls.fadeIn();
+		slideshow.on( 'mouseenter focusin', function() {
+			controls.stop( true, false ).fadeTo( 200, 1 );
 		} );
-		slideshow.mouseleave( function() {
-			controls.fadeOut();
+		slideshow.on( 'mouseleave', function() {
+			if ( ! jQuery( document.activeElement.parentNode ).hasClass( 'slideshow-controls' ) ) {
+				controls.fadeTo( 200, 0.5 );
+			}
+		} );
+		slideshow.on( 'focusout', function() {
+			if ( ! slideshow.is( ':hover' ) ) {
+				controls.fadeTo( 200, 0.5 );
+			}
 		} );
 	} else {
 		this.element.children( ':first' ).show();
@@ -3129,11 +3138,11 @@ var twemoji = (function ( ) {
             '//twemoji.maxcdn.com/',
 
       // default assets file extensions, by default '.png'
-      ext: '.png',
+      ext: '.svg',
 
       // default assets/folder size, by default "36x36"
       // available via Twitter CDN: 16, 36, 72
-      size: '36x36',
+      size: 'svg',
 
       // basic utilities / helpers to convert code points
       // to JavaScript surrogates and vice versa
@@ -3574,7 +3583,7 @@ var twemoji = (function ( ) {
       callback: how.callback || defaultImageSrcGenerator,
       base:     typeof how.base === 'string' ? how.base : twemoji.base,
       ext:      how.ext || twemoji.ext,
-      size:     toSizeSquaredAsset(how.size || twemoji.size)
+      size:     "svg" // toSizeSquaredAsset(how.size || twemoji.size)
     });
   }
 
@@ -3852,7 +3861,7 @@ jQuery.extend({VideoPress: {
 	video:{
 		flash:{
 			// Protocol and domain for player_uri and expressinstall set in video.play()
-			player_uri: ( 'https:' == location.protocol ? 'https://v0.wordpress.com' : 'http://s0.videopress.com' ) + "/player.swf?v=1.03",
+			player_uri: ( 'https:' == location.protocol ? 'https://v0.wordpress.com' : 'http://s0.videopress.com' ) + "/player.swf?v=1.04",
 			min_version:"10.0.0",
 			params:{wmode:"direct",quality:"autohigh",seamlesstabbing:"true",allowfullscreen:"true",allowscriptaccess:"always",overstretch:"true"},
 			expressinstall: ( 'https:' == location.protocol ? 'https://v0.wordpress.com' : 'http://s0.videopress.com' ) + "/playerProductInstall.swf",

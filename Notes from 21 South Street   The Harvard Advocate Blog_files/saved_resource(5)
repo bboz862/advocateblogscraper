@@ -465,7 +465,12 @@ var HighlanderComments = jQuery.extend( HighlanderComments, {
 		// Hover Tooltips
 		jQuery( '#comment-form-guest .comment-form-avatar' ).hover( function() {
 			pos = jQuery( this ).offset();
-			style = 'top:' + ( pos.top - 10 ) + 'px;left:' + ( pos.left + 35 ) + 'px;';
+            if (  'rtl' === HighlanderComments.text_direction ) {
+                style = 'top:' + ( pos.top - 10 ) + 'px;left:' + ( pos.left - 130 ) + 'px;';
+            } else {
+                style = 'top:' + ( pos.top - 10 ) + 'px;left:' + ( pos.left + 35 ) + 'px;';
+            }
+
 			jQuery( 'body' ).append( '<div id="hltt-grav" class="highlander-tooltip" style="' + style + '">' + HighlanderComments.gravatarFromEmail  + '</div>' );
 		}, function() {
 			jQuery( '#hltt-grav' ).fadeOut( 'fast', function() {
@@ -475,7 +480,11 @@ var HighlanderComments = jQuery.extend( HighlanderComments, {
 		} );
 		jQuery( '#comment-form-nascar ul' ).hover( function() {
 			pos = jQuery( this ).offset();
-			style = 'top:' + ( pos.top - 12 ) + 'px;left:' + ( pos.left - 125 ) + 'px;';
+            if (  'rtl' === HighlanderComments.text_direction ) {
+                style = 'top:' + ( pos.top - 12 ) + 'px;left:' + ( pos.left + 125 ) + 'px;';
+            } else {
+                style = 'top:' + ( pos.top - 12 ) + 'px;left:' + ( pos.left - 125 ) + 'px;';
+            }
 			jQuery( 'body' ).append( '<div id="hltt-auth" class="highlander-tooltip" style="' + style + '">' + HighlanderComments.logInToExternalAccount + '</div>' );
 		}, function() {
 			jQuery( '#hltt-auth' ).fadeOut( 'fast', function() {
@@ -566,10 +575,10 @@ var HighlanderComments = jQuery.extend( HighlanderComments, {
 		};
 
 		var oldOff, newOff, offOrder, autoWidth = false;
-		if ( 'ltr' === HighlanderComments.currentParent.css( 'direction' ) ) {
-			offOrder = [ 'Right', 'Left' ];
-		} else {
+		if ( 'rtl' === HighlanderComments.text_direction ) {
 			offOrder = [ 'Left', 'Right' ];
+		} else {
+			offOrder = [ 'Right', 'Left' ];
 		}
 
 		jQuery.each( offOrder, function( i, v ) {

@@ -13,6 +13,7 @@ CREATE TABLE blogmetadata(
 , post TEXT CHARACTER SET utf8
 , post_date DATE
 , tag_id_json VARCHAR(1000) CHARACTER SET utf8
+, first_image INT
 );
 
 LOAD DATA INFILE "/Users/brendan/Projects/advocateblogscraper/blogmetadata.csv"
@@ -21,7 +22,7 @@ COLUMNS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
 ESCAPED BY '"'
 LINES TERMINATED BY '\r\n'
-(title, category_id_json, theme_id, author, post, post_date, tag_id_json);
+(title, category_id_json, theme_id, author, post, post_date, tag_id_json,first_image);
 
 CREATE TABLE images(id SMALLINT NOT NULL PRIMARY KEY
 	, path VARCHAR(1000)
